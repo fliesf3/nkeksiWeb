@@ -1,0 +1,717 @@
+/*====================
+	Global Styles
+======================
+	font-family : century Gothic;
+*/
+
+ 
+body { padding-top: 50px; 
+	 font-family: "Century Gothic";
+
+}
+
+p.clear{
+	clear:both;
+	height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.icon-bar {
+  color: #4CAF50;
+}
+
+.green{
+	color: green;
+}
+
+.nkeksi-green{
+	color:#4CAF50;
+}
+
+.red{
+	color:  #b30000;
+}
+
+.blue-ico{
+	color: #2aabd2;
+}
+
+.white{
+	color: white;
+}
+
+.orange-color{
+	color:  #c23321;
+
+}
+.orange{
+	color: #fff;
+    background-color: #dd4b39;
+    border: 2px solid #c23321;
+    border-radius: 0px;
+	width: 178px;
+}
+
+.orange:hover{
+	color: #fff;
+	border: 2px solid #c23321;
+    background-color: #c23321;
+	border-radius: 0px;
+	width: 178px;
+}
+.blue{
+	border: 2px solid blue;
+	border-radius: 0px;
+	color: white;
+	background-color: #4285f4 ;
+}
+
+.blue:hover{
+	border: 2px solid blue;
+	border-radius: 0px;
+	color: white;
+	background-color: #4285d1 ;
+}
+
+#loader{
+	width:100%;
+	height:100%;
+	background-color: white;
+	margin: 0;
+}
+
+#loader img{
+
+	position: absolute;
+	top: 50%;
+	left:50%;
+}
+
+#loader p{
+
+	position: absolute;
+	top:60%;
+	left: 50%;
+	font-size: 18px;
+	color:#4CAF50;
+}
+
+/* ******* Century Gothic (Regular) ***** */
+
+@font-family { /* IE Rule */
+  font-family: "Century Gothic";
+  src: url("resources/fonts/gothic-c.eot");
+}
+
+@font-family { /* non-IE rule */
+  font-family: "Century Gothic";
+  src: url("resources/fonts/gothic-c.ttf") format("truetype");
+}
+
+/* ******* Century Gothic (Bold) ***** */
+
+@font-family { /* IE Rule */
+  font-family: "Century Gothic";
+  src: url("resources/fonts/gothic-b.eot");
+  font-weight: bold;
+}
+
+@font-family { /* non-IE rule */
+  font-family: "Century Gothic";
+  src: url("resources/fonts/gothic-b.ttf") format("truetype");
+  font-weight: bold;
+}
+
+/* ******* Century Gothic (Italic) ***** */
+
+@font-family { /* IE Rule */
+  font-family: "Century Gothic";
+  src: url("resources/fonts/gothic-i.eot");
+  font-style: italic;
+}
+
+@font-family { /* non-IE rule */
+  font-family: "Century Gothic";
+  src: url("resources/fonts/gothic-i.ttf") format("truetype");
+  font-style: italic;
+}
+
+/* ******* Century Gothic (Bold-Italic) ***** */
+
+@font-family { /* IE rule */
+  font-family: "Century Gothic";
+  src: url("resources/fonts/gothic-bi.eot");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-family { /* non-IE rule */
+  font-family: "Century Gothic";
+  src: url("resources/fonts/gothic-bi.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+
+.preloader{
+  position: absolute;top: 48%;left: 48%;z-index: 1;height: 40px;width: 40px;transform: translate(-50%, -50);}[class^="ball-"] {position: absolute;display: block;left: 30px;width: 12px;height: 12px;border-radius: 6px;transition: all 0.5s;animation: circleRotate 4s both infinite;transform-origin: 0 250% 0;}@keyframes circleRotate {0% {transform: rotate(0deg);}100% {transform: rotate(1440deg);}}.ball-1 {z-index: -1;background-color: #2196F3;animation-timing-function: cubic-bezier(0.5, 0.3, 0.9, 0.9);}.ball-2 {z-index: -2;background-color: #03A9F4;animation-timing-function: cubic-bezier(0.5, 0.6, 0.9, 0.9);}.ball-3 {z-index: -3;background-color: #00BCD4;animation-timing-function: cubic-bezier(0.5, 0.9, 0.9, 0.9);}.ball-4 {z-index: -4;background-color: #009688;animation-timing-function: cubic-bezier(0.5, 1.2, 0.9, 0.9);}.ball-5 {z-index: -5;background-color: #4CAF50;animation-timing-function: cubic-bezier(0.5, 1.5, 0.9, 0.9);}.ball-6 {z-index: -6;background-color: #8BC34A;animation-timing-function: cubic-bezier(0.5, 1.8, 0.9, 0.9);}.ball-7 {z-index: -7;background-color: #CDDC39;animation-timing-function: cubic-bezier(0.5, 2.1, 0.9, 0.9);}.ball-8 {z-index: -8;background-color: #FFEB3B;animation-timing-function: cubic-bezier(0.5, 2.4, 0.9, 0.9);}
+
+
+
+
+.col-lg-4{
+  font-family: "Century Gothic";
+ 
+}
+/*====================
+	Splash page
+======================
+*/
+
+
+#overlay-content{ 
+padding-top: 20px;
+	height: 100%;
+	background-color: white;
+	z-index:1002;
+}
+
+
+
+
+/*====================
+	Navigation Bar
+======================
+*/
+
+.logo-title{
+  color:#4CAF50;
+  font-size:30px;
+}
+
+
+.header-btn , .header-btn:hover{
+
+  background-color:#4CAF50;
+  color: white;
+  margin:10px 4px 2px 2px;
+  border-radius: 6px;
+
+
+}
+
+
+/*====================
+	HANDLING MODALS
+======================
+*/
+
+
+/*_________________
+MODAL INDICATORS
+____________________
+*/
+.modal-indicators li.active{
+	width: 10px;
+	height: 10px;
+	border-radius: 20px;
+	background-color: #4CAF50;
+	border: 1px solid green;
+	list-style-type: none;
+	display: inline-block;
+}
+
+.modal-indicators li ,.modal-indicators li.active{
+	width: 10px;
+	height: 10px;
+	border-radius: 20px;
+	border: 1px solid green;
+	list-style-type: none;
+	display: inline-block;
+}
+
+.block1 , .block2 , .block3{
+	height: 100px;
+	background-color: #ccc;
+	border: 1px solid black;
+	margin-bottom: 5px;
+
+}
+
+.modal-header , .modal-body{
+
+	border-bottom:0px;
+	position: relative;
+}
+
+.close , .close:hover{
+	opacity: 1;
+}
+
+.modal-title{
+	color: #4CAF50;
+
+}
+
+.form-modal{
+	background:none;
+border-radius: 0;
+border: 0px transparent;
+border-bottom:2px solid #4CAF50;
+ -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, .075);
+          box-shadow: inset 0 0 0 rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .0s, -webkit-box-shadow ease-in-out .0s;
+       -o-transition: border-color ease-in-out .0s, box-shadow ease-in-out .0s;
+          transition: border-color ease-in-out .0s, box-shadow ease-in-out .0s;
+
+}
+
+.form-control:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,.075), 0 0 0px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 0px 0px rgba(0,0,0,.075), 0 0 0px rgba(102, 175, 233, .6);
+}
+
+.disabled-button{
+	cursor: default;
+}
+
+ol.carousel-header-dots li.active ,ol.carousel-header-dots li{
+	
+	background-color: transparent;
+	border: 0.8px solid green;
+}
+
+ol.carousel-header-dots li.active {
+	background-color: #4CAF50;
+}
+
+.signButton{
+	border: 2px solid green;
+	background-color: #4CAF50;
+	color: white;
+	border-radius: 0px;
+	width:175px;
+
+}
+
+.signInLabel:hover{
+	color: #4CAF50;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+
+.register-label{
+	box-sizing: border-box;
+	 font-family: ff-clan-web-pro,&quot;Helvetica Neue&quot;,Helvetica,sans-serif;
+	 font-weight: 400;
+	 font-size: 14px;
+	 line-height: 24px;
+	 color: black;
+	}
+
+.register-input{
+	box-sizing: border-box;
+	transition: all 400ms ease 0s;
+	font-family: ff-clan-web-pro,&quot;Helvetica Neue&quot;,Helvetica,sans-serif;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 24px;
+	width: 100%;
+	padding: 8px 18px;
+	background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+	border: 0px;
+	border-bottom: 1px solid #d9d9d9;
+	outline: medium none;
+	color: rgb(0, 0, 0);
+	height: 44px;
+	}
+
+.form-group .form-control-feedback {
+  top: 0;
+  right: 44px;
+  pointer-events: initial; /* or - auto // or -  unset  */
+}
+
+/*====================
+	CAROSEL ROW
+======================
+*/
+
+.carousel-inner{
+	height: 350px;
+	 border-bottom: 20px solid transparent;
+    -webkit-border-image: url("../images/bamboo.png") 80 round; /* Safari 3.1-5 */
+    -o-border-image: url("../images/bamboo.png") 80 round; /* Opera 11-12.1 */
+    border-image: url("../images/bamboo.png") 80 round;
+
+}
+
+.item{
+	height: 350px;
+}
+
+#slide1{
+	background: #000 url("../images/pexels-photo-76093.jpeg") top center;
+	opacity: 0.9;
+	  filter: blur(1px);
+	  filter: brightness(50%);
+}
+
+#slide2{
+	background: #000 url("../images/pexels-photo-263173.jpeg") top center;
+	filter: blur(1px);
+	  filter: brightness(50%);
+}
+
+#slide3{
+	background: #000 url("../images/maxresdefault.jpg") top center;
+	opacity: 0.9;
+	filter: blur(1px);
+	  filter: brightness(50%);
+}
+
+#slide4{
+	background: #000 url("../images/Bananacake.jpg") left center;
+	opacity: 0.9;
+	filter: blur(1px);
+	  filter: brightness(50%);
+}
+
+#slide5{
+	background: #000 url("../images/rigatoni-569072_1920.jpg") left center;
+	opacity: 0.9;
+	filter: blur(1px);
+	  filter: brightness(50%);
+}
+
+.carousel-foreground{
+	position: absolute;
+	top:100px;
+	color: white;
+	
+}
+
+.carousel-foreground h1{
+
+	text-transform: uppercase;
+	font-size: 26px;
+	font-weight: bold;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+
+}
+
+.carousel-foreground  hr{
+border: 2px solid #4CAF50;
+
+}
+
+.carousel-foreground  p{
+border: 2px solid #4CAF50;
+
+}
+
+
+.indicators li{
+  background-color:#4CAF50;
+  
+}
+/*=======================================
+	DIV OF RESTAURANTS AND SUPERMARKETS
+=========================================
+*/
+
+#div-of-logo{
+	
+	margin-top: -60px;
+
+}
+.thumbnail{
+	border: 0px solid white;
+	background: transparent;
+}
+
+.spinner{
+	border: 4px solid #ccc;
+	border-radius:80px;
+	height: 110px;
+	width: 110px;
+}
+
+.spinner:hover{
+border: 4px solid #ccc;
+	border-top: 4px solid #4CAF50;
+		border-bottom: 4px solid #4CAF50;
+	-webkit-animation: spin 2s linear infinite;
+	-o-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+}
+
+.static-img:hover{
+	
+-webkit-animation: spino 2s linear 3;
+	-o-animation: spino 2s linear  3;
+	animation: spino 2s linear 3;
+
+}
+
+@keyframes spino{
+
+	from {transform: rotate(0);}
+	to {transform: rotate(0);}
+}
+
+
+@keyframes spin{
+
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+
+.thumbnail> img{
+	border: 0px solid black;
+	background-color: transparent;
+}
+
+/*====================
+DIV OF VIDEO TUTORIALS
+======================
+*/
+
+#div-videotutorials{
+	padding-left: 0px;
+	background-color: #008000;
+	color: white;
+}
+
+
+h3#testimonial-heading{
+	color: green;
+	line-height: 7px;
+}
+
+.special-line hr{
+
+	border: 1px solid #4CAF50;
+
+}
+
+
+/*====================
+DIV OF COMMENTING SYS
+======================
+*/
+
+
+.submitBtn{
+	margin-top: 5px;
+	border-radius: 0;
+	border: 2px solid white;
+	padding: 5px;
+	background-color: green;
+	color: white;
+	
+}
+
+.submitBtn:hover{
+	margin-top: 5px;
+	border-radius: 0;
+	border: 2px solid white;
+	padding: 5px;
+	background-color: green;
+	color: white;
+	
+}
+
+
+/*====================
+	FOOTER
+======================
+*/
+
+/*======= social icons ===*/
+.footer-icons a {
+  color: green;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  transition: all .5s ease;
+  font-size: 20px;
+}
+
+.footer-icons a:hover {
+  color: white;
+}
+
+
+
+.iti-flag {background-image: url("../js/build/css/flags.png");}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .iti-flag {background-image: url("../js/build/css/flags.png");}
+}
+
+
+#top-page-link{
+	width: 50px;
+	height: 30px;
+	background-color: white;
+	border-bottom-right-radius: 30px;
+	border-bottom-left-radius: 30px;
+	color: black;
+}
+
+#top-page-link a{
+	text-decoration: none;
+	color: black;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.footerdiv{
+	background-color: 	#2d1006;
+	color: white;
+}
+
+/*======== left footer =========*/
+
+div.footer-left button , div.footer-left button:hover{
+		
+		background-color: green;
+		border:1px solid green;
+		color: white;
+
+}
+
+div.footer-left p{
+	text-transform: uppercase;
+	font-weight: 500;
+
+}
+
+/*======== center footer =========*/
+
+
+/*======== right footer =========*/
+
+ul.footer-links{
+	list-style-type: none;
+	color: white;
+	padding: 0;
+	margin: -5px;
+
+}
+
+ul.footer-links> li>a{
+	color: white;
+}
+
+
+
+
+.EmailAndPasswordValidate{
+		
+		border: 1px solid #b30000;
+		display: block;
+		color: black;
+
+}
+
+.wrongPasswordFeed {
+
+	border: 2px solid #4CAF50;
+	display: block;
+	color: black;
+
+}
+
+
+/*=======================
+	MAIN MEDIA QUERIES 
+=========================
+*/
+
+@media (max-width: 415px){
+
+#myModalLabel{
+font-size: 20px;
+
+}
+
+
+.welcome-title{
+	font-size: 30px;
+	color:#4CAF50;
+	color: red;
+	
+}
+
+.signInLabel:hover{
+	color: #4CAF50;
+	text-align: center;
+}
+
+h1.order-title{
+	color: white;
+	font-size: 19px;
+		}
+
+.special-hr{
+	width: 50%
+}
+
+.order-description{
+	color: white;
+	font-size: 17.76px;
+
+}
+
+
+.carousel-inner{
+	height: 275px;
+}
+
+.item{
+	height: 275px;
+}
+
+.carousel-foreground{
+	position: absolute;
+	top:40px;
+	color: white;
+	
+}
+
+.indicators li{
+	display: none;
+  
+}
+
+.embed-responsive-item{
+	width: 200px;
+}
+
+	ul.footer-links{
+		list-style-type: none;
+		color: white;
+
+
+
+
+	}
+
+/*.footer-center{*/
+	/*float: left;*/
+/*}*/
+
+/*.footer-right{*/
+	/*float: left;*/
+/*}*/
+
+
+
+}
+

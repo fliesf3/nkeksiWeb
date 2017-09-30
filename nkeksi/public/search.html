@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+
+</head>
+<body id="wrapper">
+
+<script>
+
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCeZ9knF7puLXzr6xzldqK-426gSNNmByk",
+        authDomain: "final-nkeksi.firebaseapp.com",
+        databaseURL: "https://final-nkeksi.firebaseio.com",
+        projectId: "final-nkeksi",
+        storageBucket: "final-nkeksi.appspot.com",
+        messagingSenderId: "1064067035279"
+    };
+
+    firebase.initializeApp(config);
+
+    var ref = firebase.database().ref('Admin/');
+
+    ref.on("value" , function (snapshot) {
+
+        console.log(snapshot.val());
+        document.getElementById("wrapper").innerHTML = JSON.stringify(snapshot.val() , null ,3);
+    });
+
+
+</script>
+</body>
+</html>

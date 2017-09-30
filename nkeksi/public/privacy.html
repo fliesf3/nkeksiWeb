@@ -1,0 +1,534 @@
+<!Doctype>
+<html>
+  <head>
+    <title>Nkeksi.com</title>
+            <link rel="shortcut icon" href="images/test.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+<!-- Latest compiled and minified CSS -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-104509568-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
+
+<!--Font Awesome (added because you use icons in your prepend/append)-->
+<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+    
+    <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: #000000}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: #1bb01b !important;}.bootstrap-iso .outline, .bootstrap-iso .outline:focus{background-color: transparent; border: 2px solid #5cb85c} .bootstrap-iso .outline:hover{background-color: transparent; border: 2px solid#84e084; color: #84e084 !important}.bootstrap-iso .form-control:focus { border-color: #18c030;  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(24, 192, 48, 0.6); box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(24, 192, 48, 0.6);} .asteriskField{color: red;}.bootstrap-iso form .input-group-addon {color:#20850a; background-color: #eeeeee; border-radius: 4px; padding-left:12px}
+
+.preloader{
+  position: absolute;top: 48%;left: 48%;z-index: 1;height: 40px;width: 40px;transform: translate(-50%, -50);}[class^="ball-"] {position: absolute;display: block;left: 30px;width: 12px;height: 12px;border-radius: 6px;transition: all 0.5s;animation: circleRotate 4s both infinite;transform-origin: 0 250% 0;}@keyframes circleRotate {0% {transform: rotate(0deg);}100% {transform: rotate(1440deg);}}.ball-1 {z-index: -1;background-color: #2196F3;animation-timing-function: cubic-bezier(0.5, 0.3, 0.9, 0.9);}.ball-2 {z-index: -2;background-color: #03A9F4;animation-timing-function: cubic-bezier(0.5, 0.6, 0.9, 0.9);}.ball-3 {z-index: -3;background-color: #00BCD4;animation-timing-function: cubic-bezier(0.5, 0.9, 0.9, 0.9);}.ball-4 {z-index: -4;background-color: #009688;animation-timing-function: cubic-bezier(0.5, 1.2, 0.9, 0.9);}.ball-5 {z-index: -5;background-color: #4CAF50;animation-timing-function: cubic-bezier(0.5, 1.5, 0.9, 0.9);}.ball-6 {z-index: -6;background-color: #8BC34A;animation-timing-function: cubic-bezier(0.5, 1.8, 0.9, 0.9);}.ball-7 {z-index: -7;background-color: #CDDC39;animation-timing-function: cubic-bezier(0.5, 2.1, 0.9, 0.9);}.ball-8 {z-index: -8;background-color: #FFEB3B;animation-timing-function: cubic-bezier(0.5, 2.4, 0.9, 0.9);}
+    </style> 
+
+      <link href="css/main.css" rel="stylesheet">
+      <link href="css/main2.css" rel="stylesheet">
+      <link href="css/restaurant.css" rel="stylesheet">
+      <link href="css/restaurantpg.css" rel="stylesheet">
+      <link href="css/sweetalert.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="css/google.css">
+      <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+      <script src="https://use.fontawesome.com/7ff44754f3.js"></script>
+      <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
+      <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+      <link rel="stylesheet" href="js/build/css/intlTelInput.css">
+      <link rel="stylesheet" href="js/build/css/demo.css">
+
+  </head>
+
+  <body>
+      <script type="text/javascript" src="js/notify.min.js"></script>
+      <script type="text/javascript" src="js/sweetalert.min.js"></script>
+
+
+ <div class="preloader">
+  <span class="ball-1"></span>
+  <span class="ball-2"></span>
+  <span class="ball-3"></span>
+  <span class="ball-4"></span>
+  <span class="ball-5"></span>
+  <span class="ball-6"></span>
+  <span class="ball-7"></span>
+  <span class="ball-8"></span>
+</div>
+
+<!-- Modal section for the sign in and register button -->
+<!-- Modal for sign -->
+
+<div class="modal fade modal-register" id="googleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="font-family:Arial;">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+ <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="false"><img src="images/quit.png" class="img-responsive"></span></button>
+        <h2 class="modal-title text-center" id="myModalLabel">Verify your Info to proceed</h2>
+        <div class="row text-center">
+            <div class="text-center center-block">
+                  <img id="googlePic" class="profile-img img-circle" width="90px" src="" alt="profile image">
+                  </div>
+          </div>
+      </div>
+
+ <!--    <form method="post"> -->
+<div class="modal-body">
+<div class="bootstrap-iso">
+ <div class="container-fluid">
+  <div class="row">  
+   <div class="col-md-12 col-sm-12 col-xs-12">
+
+
+     <div class="form-group">
+      <label class="control-label requiredField" for="name">
+       Username
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <div class="input-group">
+       <div class="input-group-addon">
+        <i class="fa fa-bookmark nkeksi-green">
+        </i>
+       </div>
+       <input class="form-control" id="googleFirstName" name="googleFirstName" placeholder="enter your first name (username)" type="text"/>
+      </div>
+     </div>
+
+     <div class="form-group ">
+      <label class="control-label requiredField" for="googleLastName">
+       Last name
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <div class="input-group">
+       <div class="input-group-addon">
+        <i class="fa fa-bookmark nkeksi-green">
+        </i>
+       </div>
+       <input class="form-control" id="googleLastName" name="googleLastName" placeholder="enter your last name" type="text"/>
+      </div>
+     </div>
+
+     <div class="form-group ">
+      <label class="control-label requiredField" for="googleTel">
+       Telephone
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <div class="input-group">
+       <div class="input-group-addon">
+        <i class="fa fa-phone nkeksi-green">
+        </i>
+       </div>
+       <input class="register-input" id="googlePhone" name="googlePhone" placeholder="enter your telephone number" type="text"/>
+      </div>
+     </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+     <div class="modal-footer">
+     <div class="form-group">
+      <div>
+       <button id="submitGoogle" class="btn btn-success btn-sm outline nkeksi-green" type="button">
+        Submit
+       </button>
+      </div>
+     </div> 
+   </div>
+
+
+  </div>
+ </div>
+</div>
+
+
+
+<div class="modal fade modal-register specialModal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="false"><img src="images/quit.png" class="img-responsive"></span></button>
+        <h4 class="modal-title text-center" id="myModalLabel"><u>SIGN IN</u></h4><br>
+        <center>
+        <span class="green">To start using Nkeksi, please kindly sign in by </span><br />
+          <span class="green">providing the following information in this form.</span>
+       </center>
+      </div>
+
+           <!-- form commence here -->
+      <div class="modal-body">
+
+<div>
+  <div style="box-sizing: border-box; font-family: ff-clan-web-pro,&quot;Helvetica Neue&quot;,Helvetica,sans-serif; font-weight: 500; font-size: 14px; line-height: 24px; color: rgb(62, 62, 62); margin-bottom: 24px;padding:0 20px 0 20px;">
+
+    <label class="register-label" for="inputEmail">Email</label>
+    <input class="register-input" placeholder="name@example.com" type="text" id="inputEmail"><br><br>
+    <label class="register-label" for="inputPassword">Password</label>
+    <input class="register-input" placeholder="At least 6 characters" type="password" id="inputPassword">
+
+  </div>
+</div>
+
+      </div><!-- end of modal body -->
+
+      <div class="modal-footer">
+        <div class="col-md-12 col-lg-12 col-xs-12">
+          <p class="text-center">Forgot your password?<a href="#" id="resetPassword" class="red"> Click here</a></p>
+        </div><p class="clearfix">
+         <div class="form-group">
+          
+          <div class="col-md-4 col-md-offset-4 col-offset-xs-12 col-xs-6">
+<button id="googleLogin" class="btn btn-block btn-social btn-google orange" style=""><span class="fa fa-google"></span> | Sign in with Google </button>
+            </div>
+            <p class="clearfix"/>
+            <div class="col-md-4 col-md-offset-4 col-offset-xs-12 col-xs-6">
+            <center><button id="btnlogin" class="btn btn-default btn-success signButton">Sign in</button></center>
+          </div>
+
+        </div>
+      </div><!-- end of modal footer-->
+
+   <!-- end of form -->
+
+
+</div>
+</div>
+</div>
+<!-- end of the modal register-->
+
+
+
+<!-- Modal for register -->
+<div class="modal fade modal-register" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="false"><img src="images/quit.png" class="img-responsive"></span></button>
+       <!-- Indicators -->
+          <ol class="modal-indicators">
+            <li id="dot1" class="active"></li>
+            <li id="dot2"></li>
+            <li id="dot3"></li>
+          </ol>
+        <p class="fixclear">
+        <h1 class="modal-title text-center" id="myModalLabel"><u>ACCOUNT</u></h1><br>
+        <p class="green">By creating an account you will be able to see awesome features of Nkeksi.
+        </p>
+      </div>
+
+       <!-- form commence here -->
+      <div class="modal-body">
+
+<div id="block1" class="frm">
+  <div style="box-sizing: border-box; font-family: ff-clan-web-pro,&quot;Helvetica Neue&quot;,Helvetica,sans-serif; font-weight: 500; font-size: 14px; line-height: 24px; color: rgb(62, 62, 62); margin-bottom: 24px;padding:0 20px 0 20px;">
+
+    <label class="register-label">First Name</label>
+    <input class="register-input" placeholder="first name here" type="text" id="FirstName"><br><br>
+    <label class="register-label">Last name</label>
+    <input class="register-input" placeholder="last name here" type="text" id="LastName">
+
+  </div>
+</div>
+
+
+<div id="block2"  class="frm" style="display: none;">
+  <div style="box-sizing: border-box; font-family: ff-clan-web-pro,&quot;Helvetica Neue&quot;,Helvetica,sans-serif; font-weight: 500; font-size: 14px; line-height: 24px; color: rgb(62, 62, 62); margin-bottom: 24px;padding:0 20px 0 20px;">
+
+    <label class="register-label">Email</label>
+    <input class="register-input" placeholder="name@example.com" type="email" id="RegisterEmail"><br><br>
+    <label class="register-label">Phone Number</label>
+    <input class="register-input" id="phonenum" type="tel">
+<!--     <input class="register-input" placeholder="(+237)xxx-xxx-xxx" type="text" id="phonenum">
+ -->
+  </div>
+</div>
+
+<div id="block3"  class="form2" style="display: none;">
+  <div style="box-sizing: border-box; font-family: ff-clan-web-pro,&quot;Helvetica Neue&quot;,Helvetica,sans-serif; font-weight: 500; font-size: 14px; line-height: 24px; color: rgb(62, 62, 62); margin-bottom: 24px;padding:0 20px 0 20px;">
+
+    <label class="register-label">Password</label>
+    <input class="register-input" placeholder="At least 6 characters" type="password" id="RegisterPassword"><br><br>
+    <label class="register-label">Confirm Password</label>
+    <input class="register-input" placeholder="Re-type Password" type="password" id="ConfirmPassword">
+
+  </div>
+</div>
+
+
+      </div><!-- end of modal body -->
+
+      <div class="modal-footer">
+        <div class="col-sm-8">
+          Are you already a user?<a id="signInLabel" data-toggle="modal" class="nkeksi-green signInLabel"> Sign In</a>
+        </div><p class="clearfix">
+         <div class="form-group">
+          <div id="blk1" class="col-sm-offset-3 col-sm-8">
+                <button  id="open1" class="btn btn-success" type="button">Next <span class="fa fa-arrow-right"></span></button>
+          </div>
+          <div id="blk2" class="form2 col-sm-offset-3 col-sm-8" style="display: none;">
+                <button id="back1" class="btn  nkeksi-green" type="button"><span class="fa fa-arrow-left"></span> Back</button> 
+                <button id="open2"  class="btn btn-success" type="button">Next <span class="fa fa-arrow-right"></span></button> 
+          </div>
+          <div id="blk3" class="col-sm-offset-3 col-sm-8" style="display: none;">
+                <button id="back2" class="btn  nkeksi-green" type="button"><span class="fa fa-arrow-left"></span> Back</button> 
+                <button  id="btnsignin" class="btn btn-success" type="button">Submit </button>
+          </div>
+        </div>
+      </div><!-- end of modal footer-->
+
+    <!-- end of form -->
+
+    </div>
+  </div>
+</div>
+<!-- end of the modal register-->
+
+
+
+
+<div class="container-fluid">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar green-bg"></span>
+          <span class="icon-bar green-bg"></span>
+          <span class="icon-bar green-bg"></span>
+        </button>
+        <a class="navbar-brand header-nav" href="index.html" style="margin-top:-10px;">
+        <img src="images/real_logo.png" alt="nkeksi-logo" title="nkeksi-logo" width="140">
+        </a>
+      </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                 <ul class="nav navbar-nav navbar-right">
+              <!-- Buttons to give a modal -->
+                <li><button id="primarySignin" type="button" class="btn btn-success header-btn show" data-toggle="modal" data-target="#myModal">SIGN IN</button></li>                    
+                <li><button id="primaryRegister" type="button" class="btn btn-success header-btn show" data-toggle="modal" data-target="#myModal2">REGISTER</button></li>
+                <li><a id="displayUsername"><span class="displayUsername"></span></a></li>
+                <li><img id="silie" src="images/usericon.png" height="60" width="60" class="img-respnsive img-circle hidden" data-category="Site-Wide Custom Events" data-label="User avatar" tabindex="0"></li>
+                  <li><button id="btnlogout" type="button" class="btn btn-success header-btn hidden">SIGN OUT</button></li>
+
+                  
+                 </ul>
+             </div>
+           </div>
+  </nav>
+
+
+<center><h1 class="nkeksi-green">PRIVACY POLICY</h1></center>
+
+<div class="container" style="line-height:2em;">
+	
+<h3>Agreement</h3>
+<p>
+	<span class="nkeksi-green">Nkeksi</span> respects the privacy of it’s users. This policy is to inform it’s users on the information you
+maybe required to provide to enable you use this app and how this information you have provided
+will be used to provide the service you seek including the situations under which they will be
+disclosed
+
+</p>
+
+<ul>
+<li>
+This policy is made in Cameroon and as such is subject to all national and internal laws
+including regional law ratified by Cameroon
+By using this app you agree to these Privacy policy which is describe in; gathering ,Use, and
+disclosure of information
+Access to personal information
+Nkeksi is entitled to have access to basic personal information and this information is to be
+provided by it’s subscribers while they:
+</li>
+<li>
+Register for our services
+Login with social media accounts
+communicate with us
+Create a public profile
+This information include: users name, address email ,phone number, age, gender, date of birth, and
+other demographic information which may be relevant. Note that if u Cary out business transaction
+you maybe required to provide some information regarding your finances such as your valid credit
+card numbers and the method of payment
+Analytics
+Nkeksi may also partner with selected third parties to enable tracking technologies to enable
+them collect information On how you interact with the app. This will make them analyse and track
+data and as such will determine which contents are popular and also will make them to better
+understand online activities
+App communication
+Nkeksi may occasionally use your information to send you notifications about new services offered
+by this website that you, would like. Also we may send you service related information from time to
+time and you have the option to opt out of such notifications during registration in your account
+setting
+Disclosure
+Nkeksi may disclose your private information under the following circumstances
+
+</li>
+<li>
+When disclosure is appropriate in efforts to investigate, prevent and take actions with
+regards to illegal activities and also to enforce our terms and Conditions as well as protect
+our users and employees
+Your information maybe disclosed to third parties to enable them provide you with certain
+services
+</li>
+<li>
+Thirdly in case of dissolution or merger your information may be disclosed to the merging
+app or succeeding app
+Security
+Measures have been put in place in other to protect your information from loss theft and misuse But
+even the best measures can’t give you a 100% guarantee of the safety of your information and
+removing all the risk that your information can face as such you are reminded not to disclose any
+personally identifying information to any third party
+Nkeksi is not responsible for any third party circumvention of your account
+Changes
+Nkeksi reserves the right to change and update this privacy policy as need arises as time goes by
+</li>
+</ul>
+<br/>
+<p class="text-center">
+If you do not understand or have any questions with regards to these privacy policy you can
+contact our privacy officer
+</p>
+<p class="nkeksi-green">
+Facebook: nkeksi<br/>
+Tel: 651969443 | 673367517<br>
+Gmail: forchapc11@gmail.com | ransompisoh@gmail.com
+
+</p>
+</div>
+
+<!-- FOOTER -->
+
+ <div class="row footerdiv">
+      <div class="container-fluid text-center" id="top-page-link">
+        <a href="#" target="_top"><span class="text-left">top</span></a>
+      </div>
+<p class="clearfix"/>
+<p class="clearfix"/>
+<footer class="">
+
+        <div class="col-lg-4 footer-left text-center">
+          <p class="text-center">partner with us <span class="glyphicon glyphicon-hand-down"></span></p>
+  <a href="restaurant_partner.html"><button type="button" class="btn btn-success">Become a Restaurant Partner</button></a><br><br>
+  <a href="supermarket_partner.html"><button type="button" class="btn btn-success">Become a Supermarket Partner</button></a>
+
+        </div>
+
+        <div class="col-lg-4 footer-center text-center">
+          <div class="">
+          <p>Get Our App for free.</p>
+          <a href="https://play.google.com/store/apps/details?id=tech.firefly.nkeksi"><img id="app-picture" src="images/outofdate-badge_no.png" class="center-block img-responsive"></a>
+          </div>
+<p class="clearfix">
+        <div class="copyright">
+          <p>
+             &copy; 2017 www.nkeksi.com ...<br>
+            Designed by Fireflies Technologies.
+          </p>
+        </div>
+       </div>
+
+        <div class="col-lg-3 col-lg-offset-1 footer-right text-center">
+                <div class="footer-links" style="text-align:left">
+                  <li><a href="#">Help</a></li>
+                  <li><a href="privacy.html">Privacy Policy</a></li>
+                  <li><a href="terms_conditions.html">Terms of use</a></li>
+                  <li><a href="#">FAQs</a></li>
+                  <li></li>
+                </div>
+               <div class="footer-icons">
+                <p class="clearfix"/>
+                        <p>Catch us on social media</p>
+                    <a href="https://www.facebook.com/Nkeksi-1582529698444155"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                    <a href="https://www.instagram.com/nkeksi"><i class="fa fa-instagram"></i></a>
+              </div>
+          <p class="clearfix">
+          <p class="clearfix">
+        </div>
+    </footer>
+</div>
+
+
+
+
+</div><!--end of container fluid -->
+
+</div><!-- end of wholw wrapper -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery2.js"></script>
+  <script type="text/javascript" src="css/bootstrap/js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/growl/js/growl.js"></script>
+
+  <script>
+  $(window).load(function() {
+    
+    $(".preloader").hide();
+
+});
+
+</script>
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/59a7c6277ab2de3aea9d786f/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+  <script src="js/build/js/intlTelInput.js"></script>
+  <script>
+    $("#phonenum , #googlePhone").intlTelInput({
+      // allowDropdown: false,
+       autoHideDialCode: false,
+      // autoPlaceholder: "off",
+       dropdownContainer: "body",
+      // excludeCountries: ["us"],
+       formatOnDisplay: false,
+       geoIpLookup: function(callback) {
+         $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+           var countryCode = (resp && resp.country) ? resp.country : "";
+           callback(countryCode);
+         });
+       },
+       hiddenInput: "full_number",
+       initialCountry: "auto",
+       nationalMode: false,
+      //onlyCountries: ['us', 'gb', 'ch', 'ca', 'do' , 'cam'],
+       placeholderNumberType: "MOBILE",
+       preferredCountries: ['cn', 'jp'],
+       separateDialCode: true,
+      utilsScript: "js/build/js/utils.js"
+    });
+  </script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+      <script type="text/javascript" src="js/sweetalert.min.js"></script>
+    <script type="text/javascript" src="js/loader.js"></script>
+
+<!--   // <script type="text/javascript" src="js/login.js"></script>
+  // <script type="text/javascript" src="js/main.js"></script> -->
+  </body>
+  
+</html>

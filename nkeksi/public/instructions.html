@@ -1,0 +1,183 @@
+<!Doctype>
+<html>
+  <head>
+    <title>Nkeksi.com</title>
+        <link rel="shortcut icon" href="images/test.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-104509568-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+          <link href="css/bootstrap/css/bootstrap.css" rel="stylesheet">
+      <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/main.css" rel="stylesheet">
+      <link href="css/main2.css" rel="stylesheet">
+      <link href="css/restaurant.css" rel="stylesheet">
+       <link href="css/restaurant_partner.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+      <link rel="stylesheet" type="text/css" href="css/google.css">
+      <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+      <script src="https://use.fontawesome.com/7ff44754f3.js"></script>
+      <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+    <!-- end of the bootstrap library -->
+  </head>
+  <body>
+
+      <!-- End of bootstrap js library -->
+<!-- Modal section for the sign in and register button -->
+<!-- Modal for sign -->
+<div class="modal fade modal-register" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="false"><img src="images/quit.png" class="img-responsive"></span></button>
+        <h4 class="modal-title" id="myModalLabel"><u>SIGN IN</u></h4><br>
+        <p class="green">Sign in as a partner.
+        </p>
+      </div>
+
+      <div class="modal-body">
+
+<div>
+  <div style="box-sizing: border-box; font-family: ff-clan-web-pro,&quot;Helvetica Neue&quot;,Helvetica,sans-serif; font-weight: 500; font-size: 14px; line-height: 24px; color: rgb(62, 62, 62); margin-bottom: 24px;padding:0 20px 0 20px;">
+
+    <label for="ownerEmail" class="register-label">Username</label>
+    <input class="register-input" placeholder="name@example.com" type="text" id="ownerEmail"><br><br>
+    <label for="ownerPassword" class="register-label">Password</label>
+    <input class="register-input" placeholder="At least 6 characters" type="password" id="ownerPassword">
+
+  </div>
+</div>
+
+      </div><!-- end of modal body -->
+
+      <div class="modal-footer">
+        <div class="col-sm-8">
+          Forgot your password?<a href="#" class="red"> Click here</a>
+        </div><p class="clearfix">
+         <div class="form-group">
+          <div class="col-sm-offset-3 col-sm-8">
+            <button  class="btn btn-default btn-success signButton" id="restauSignin">Sign in</button>
+          </div>
+        </div>
+      </div><!-- end of modal footer-->
+
+
+</div>
+</div>
+</div>
+<!-- end of the modal register-->
+
+<div class="container-fluid">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand header-nav" href="index.html" style="margin-top:-10px;">
+        <img src="images/real_logo.png" alt="nkeksi-logo" title="nkeksi-logo" width="140">
+        </a>
+      </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                 <ul class="nav navbar-nav navbar-right">
+              <!-- Buttons to give a modal -->
+                <li><a id="ownerName" class="hide">Welcome, <span class="displayUsername nkeksi-green"></span></a></li>
+                <li><a class="navbar-brand"><img src="../images/res.png" height="50" width="50" class="img-responsive hidden"></a></li>
+                <li><button type="button" id="restauLogin" class="btn btn-success header-btn" data-toggle="modal" data-target="#myModal">SIGN IN</button></li>                    
+                <li><button id="restauLogout" type="button" class="btn btn-success header-btn hidden">SIGN OUT</button></li>
+
+                  
+                 </ul>
+             </div>
+  </nav>
+
+
+  <div class="row"> 
+
+       
+          <fieldset>
+              <legend><h2 class="nkeksi-green" style="font-family:Arial;">Nkeksi Partnership Form</h2></legend>
+              <h4 class="text-center" style="font-family:Arial;">Inorder to ensure quality and validity of restaurants on the platform , please upload  any legal scanned document of your restaurant.<br>
+                <p class="clearfix"><p class="clearfix"><p class="clearfix">
+                  <p class="clearfix"><p class="clearfix"><p class="clearfix">
+                <span class="nkeksi-green">NB: This will be verified by the nkeksi team.</span></h4>                
+                  
+                  <div class="col-lg-6 col-lg-offset-3 col-xs-12 col-md-4 col-md-offset-4">
+                  <div id="submitBox">
+                    <div class="table-responsive">
+                    <table class="table table-hover">
+                  <tr>
+                      <td class="success nkeksi-green">
+                        Upload your restaurant file
+                      </td>
+                      <td class="info">
+                      <input type="file" id="uploaderDoc" value="upload" class="text-wrap"><br />
+                                      <!-- <progress id="progressBar" max="100" value="77"></progress> -->
+                      </td>
+                      <td class="" > 
+                       <div id="spinner-load" class="spinner-load" style="display:none;">
+                          <img id="img-spinner" src="nkeksi-loader.gif" alt="Loading"/>
+                        </div>
+                      </td>
+                    </tr>
+                  
+                </table>
+                </div>
+                 <p class="text-center">                 
+                        <button type="submit" class="btn btn-default submitBtn" id="uploadDoc">Submit</button>
+                   </p>
+                </div>
+                </div>
+          </fieldset>
+
+  </div>
+
+
+          <div class="row">
+        <nav class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="container">
+    <p class="text-left" style="color:#ccc;">&copy;Copyrights Fireflies technologies</p>
+    <p class="text-right" style="color:#ccc;">Designed by fireflies technologies</p>
+    <p class="text-right" style="color:#ccc;">Contact | 673367517.</p>
+  </div>
+        </nav>
+        </div>
+    </div><!-- end of the container fluid -->
+    
+      <script src="js/jquery.js"></script>
+  <script src="js/jquery2.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+
+    <script type="text/javascript">
+$(function() {
+
+    $('#my-multi-select').multiselect({
+        includeSelectAllOption: true
+    });
+
+    $("#my-multi-select").multiselect('selectAll', false);
+    $("#my-multi-select").multiselect('updateButtonText');
+
+});
+</script>
+
+<script type="text/javascript" src="js/sweetalert.min.js"></script>
+<script type="text/javascript" src="js/loader.js"></script>
+<script type="text/javascript" src="js/signform.js"></script>
+
+</body>
+</html>

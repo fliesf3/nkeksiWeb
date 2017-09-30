@@ -1,0 +1,82 @@
+body  { 
+	padding-top: 60px; 
+	 font-family: "Century Gothic";
+	 background: green; /* For browsers that do not support gradients */
+  
+}
+/*
+    background: -webkit-linear-gradient(green, white); 
+    background: -o-linear-gradient(green, white);
+    background: -moz-linear-gradient(green, white); 
+    background: linear-gradient(green, white); 
+*/
+.navbar {
+	padding-bottom: 10px;
+		background: green; /* For browsers that do not support gradients */
+			 border-bottom: 15px solid transparent;
+    -webkit-border-image: url("../images/bamboo.png") 80 round; /* Safari 3.1-5 */
+    -o-border-image: url("../images/bamboo.png") 80 round; /* Opera 11-12.1 */
+    border-image: url("../images/bamboo.png") 80 round;
+
+	} 
+.container-fluid{
+	background: green; /* For browsers that do not support gradients */
+
+
+}
+
+#count-wrapper{ 
+padding-top: 20px;
+	height: 100%;
+	z-index:1002;
+	width: 100%;
+	border:0px transparent;
+	background: transparent;
+
+}
+.clock{
+	background-color:  #4CAF50;
+
+}
+
+.clock > h1{
+	color: white;
+	font-size: 5em;
+	font-weight: bold;
+	font-family: Arial;
+}
+
+.clock > p{
+	color: white;
+	font-weight: bold;
+	font-size: 1em;
+	font-family: Arial;
+}
+
+.jumbotron{
+
+	background: transparent;
+}
+
+.navbar-right{
+
+	margin-right: 25px;
+}
+.mini-footer{
+	color: white;
+
+	font-size: 1em;
+	font-size: bold;
+}
+
+.footer-icons a {
+  color: white;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  transition: all .5s ease;
+  font-size: 20px;
+}
+
+.footer-icons a:hover {
+  color: pink;
+}

@@ -1,0 +1,110 @@
+RHEMA RESTAURANT
+================
+web : http://www.rhemaservicesltd.com
+email: binueannette@yahoo.com
+about: Welcome to Rhema Services ltd we are all about giving you a new life style, helping you maximize your busy schedule and live effectively. We want to take over the worry of what to eat, how to get it done and delivered, how to organize events without stressing out, what gifts to present to family and friends on special occasions, and more services. 
+
+description :Multi-Cuisine , Serves breakfast, lunch, dinner, coffee and drinks
+
+services : Takes Reservations , Walk-Ins Welcom ,Good For Groups ,Good For Kids ,Take Out ,Delivery ,Catering ,Waiter Service ,Outdoor Seating 
+
+location : Buea
+opening hrs: 8am - 10pm
+
+RESTAURANT SENEGALAIS CHEZ FATIMA
+==================================
+General Manager : MICHIRAIN Luca
+
+web: 
+email: lucsonor@yahoo.fr
+
+about: Vous avez dès à présent la possibilité de stimuler vos appétits dans un cadre idéal pour vos déjeuners, Dîner........ Contactez dès à présent le Restaurant Sénégalais Chez Fatima pour toutes vos réservations.
+il est désormais facile pour toi de t'orienter lorsque tu cherches un endroit calme et serin pour tes moments d'appétit: si t'es à Yaoundé, dirige toi en face Élise Bar Essos
+si t'es à Douala c'est encore plus facile à l'avenue Joss AKWA ou tout simplement t’appelle au +237 99 88 77 66 
+
+description : De la grillade au petit déjeuner passant par un déjeuner aux "fast foods" assurent le quotidien. Bien se nourrir c'est la vie, c'est le bien être,
+
+
+services :
+location : Buea
+
+opening hrs : 11:00AM - 11:00PM
+
+
+DELUXE SNACK
+============
+
+web :
+
+eamil: 
+
+about: 
+
+description: 
+
+
+OXFORD GUEST HAUS AND RESTAURANT
+================================= 
+web : http://oxfordhaus.wordpress.com
+
+email :oxfordguesthaus@gmail.com
+
+Chief Cook: Comfort Nyaah and Predence Nene
+Chief Waiter:Tapang Amos
+
+description : Multi-Cuisine Serves breakfast, lunch, dinner, coffee and drinks Takes Reservations
+Walk-Ins Welcome
+Good For Groups
+Take Out
+Delivery
+Catering
+Waiter Service
+Outdoor Seating At Oxford Haus, we committed to giving you just the best. Be our Guest!
+
+about: Situated in a central area in Buea – the picturesque capital of the South West Region - Oxford Guest Haus and Restaurant offers quality, en-suite meals and accommodation at affordable prices. Situated at now becoming heart of Buea, directly opposite the junction of the University of Buea, and several other financial and educational institution, Oxford Guest Haus and Restaurant is the perfect base to explore the city, as it is conveniently only a 10 minutes drive from the central Motor park at Mile 17
+
+opening hours: Always Open
+
+services : 
+
+
+SPARKLAND RESTAURANT
+=====================
+
+11:30 DAILY
+
+
+
+MARAYZ RESTAURANT
+=================
+
+about : With Marayz you have no worries...Marayz will give you the best when it comes to fast food... Buea, opposite Eta palace. There you'll find the best food
+
+
+=======================================
+	firebase rules
+====================================
+
+
+
+
+{
+ "rules": {
+   "$type":{
+     ".read":"auth != null",
+       ".write":"auth != null"
+   },
+   "unVerified": {
+        ".read": true,
+          ".write":true,
+        ".indexOn": ["indexLocation"]
+    },
+      
+    "menu": {
+      ".read": true,
+        ".write": true,
+          ".indexOn": ["item"]
+    }
+  }
+}
+

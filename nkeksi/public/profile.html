@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Edit Profile</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+	<link rel="stylesheet" type="text/css" href="css/user.css">
+	<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+
+</head>
+<body>
+
+	<div class="container-fluid">
+
+	 <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar green-bg"></span>
+          <span class="icon-bar green-bg"></span>
+          <span class="icon-bar green-bg"></span>
+        </button>
+        <a class="navbar-brand header-nav" href="index.html" style="margin-top:-10px;">
+        <img src="images/real_logo.png" alt="nkeksi-logo" title="nkeksi-logo" width="140">
+        </a>
+      </div>
+     
+        </div>
+  </nav>
+
+<div class="row" style="padding-top:70px;">
+<div class="container">
+ <div class="well span8 offset2">
+        <div class="row-fluid user-row">
+            <div class="span1">
+            	  <input type="file" id="fileInput" style="display: none" />
+				  <div id="buttonPic" >
+				  <img class="profile-pic" src="" alt="">
+				  <div class="middle">
+					<i class="fa fa-camera" aria-hidden="true"></i>
+				      <span class="text">Change Image</span>
+				     </div>
+				  </div>
+				 <progress value="0" max="100" id="uploader1" class=""></progress>
+            </div>
+            	  <p class="clearfix">
+				  <p class="clearfix">
+
+            <div class="span10">
+                <strong class="user-name"></strong><br>
+            </div>
+
+            <p class="clearfix"><p class="clearfix"><p class="clearfix">
+        </div>
+    <div class="row">
+         <div id="profileCollapse" class="hidden">
+                 <h2 class="text-center text-primary">Update Profile</h2>
+
+             <div class="form-horizontal">
+                 <div class="form-group">
+                     <label class="control-label col-sm-2" for="one">Username:</label>
+                     <div class="col-sm-10">
+                         <input type="text" class="form-control" id="one" placeholder="Enter first name">
+                     </div>
+                 </div>
+                 <div class="form-group">
+                     <label class="control-label col-sm-2" for="two">First Name:</label>
+                     <div class="col-sm-10">
+                         <input type="text" class="form-control" id="two" placeholder="Enter first name">
+                     </div>
+                 </div>
+                 <div class="form-group">
+                     <label class="control-label col-sm-2" for="three">Last Name:</label>
+                     <div class="col-sm-10">
+                         <input type="text" class="form-control" id="three" placeholder="Enter last name">
+                     </div>
+                 </div>
+                 <div class="form-group">
+                     <label class="control-label col-sm-2" for="four">Telephone</label>
+                     <div class="col-sm-10">
+                         <input type="text" class="form-control" id="four" placeholder="Enter telephone">
+                     </div>
+                 </div>
+
+
+                 <div class="form-group">
+                     <div class="col-sm-offset-2 col-sm-10">
+                         <button type="button" id="submitUpdate" class="btn btn-success pull-right">Submit</button>
+                     </div>
+                 </div>
+             </div>
+             <p class="text-center nkeksi-green hidden hideme" id="hiddenUpdate">User profile updated!<p>
+             <br><p class="clearfix">
+
+             <button class="btn btn-danger" id="cancelProfile"><span class="glyphicon glyphicon-remove"></span>&nbsp;cancel</button>
+         </div>
+     </div>
+
+     <div id="userProfile" class="row-fluid user-infos cyruxx">
+            <div class="span10 offset1">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">User information</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row-fluid">
+                            <div class="span3 text-center">
+                                <img class="img-circle user-pic" id="user-pic2" width="120"
+                                     src=""
+                                     alt="User Pic">
+                            </div>
+                            <div class="span6">
+                                <strong class="user-name text-center"></strong><br>
+                                <table class="table table-condensed table-responsive table-user-information">
+                                    <tbody>
+                                    <tr>
+                                        <td>User:</td>
+                                        <td>Nkeksi user</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Registered since:</td>
+                                        <td class="user-date">XX/XX/20X3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>First Name</td>
+                                        <td class="user-fname"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Last Name</td>
+                                        <td class="user-lname"></td>
+                                    </tr>
+                                     <tr>
+                                        <td>Email</td>
+                                        <td class="user-email nkeksi-green"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Telephone</td>
+                                        <td class="user-tel"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <button  id="editBtnProfile" class="editProfileBtn"><i data-toggle="tooltip" title="Edit Profile" class="glyphicon glyphicon-pencil white"></i></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</div>
+</div>
+</div>
+
+
+</div>
+
+
+</body>
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery2.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+      <script type="text/javascript" src="js/sweetalert.min.js"></script>
+      <script type="text/javascript" src="js/user.js"></script>
+
+</html>

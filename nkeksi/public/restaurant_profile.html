@@ -1,0 +1,368 @@
+<!Doctype>
+<html>
+  <head>
+    <title>Nkeksi</title>
+        <link rel="shortcut icon" href="images/test.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-104509568-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+          <link href="css/bootstrap/css/bootstrap.css" rel="stylesheet">
+      <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/main.css" rel="stylesheet">
+      <link href="css/main2.css" rel="stylesheet">
+      <link href="css/restaurant.css" rel="stylesheet">
+       <link href="css/restaurant_partner.css" rel="stylesheet">
+       <link rel="stylesheet" type="text/css" href="css/partners.css">
+      <link rel="stylesheet" type="text/css" href="css/google.css">
+      <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+      <script src="https://use.fontawesome.com/7ff44754f3.js"></script>
+      <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+
+    <!-- end of the bootstrap library -->
+  </head>
+  <body>
+
+
+      <div class="container-fluid">
+
+          <div class="row">
+        <div class="navbar navbar-fixed-top">
+          <div class="img-responsive" id="restaurantBackground">
+
+                <div id="restoLogo" class="col-lg-6 col-lg-offset-3 text-center">
+
+                <img id="uniqueRestoPic" src="images/hut.png" height="200" width="200" class="img-circle">
+                <p>
+                  <h1 id="uniqueRestoName" class="nkeksi-green" style="font-family:Arial;font-weight:bold"></h1>
+                </p>
+              </div>
+          </div>
+
+       </div>
+     </div>
+
+<div class="dropdown" id="editBtn">
+   
+  <button id="editBtn" type="button" class="glyphicon glyphicon-plus-sign" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+   <div id="fiddle" class="dropdown-menu" aria-labelledby="editBtn">
+            <ul>
+              <li>User Profile</li>
+              <li><a href="#" id="logOut">logout</a></li>
+            </ul>
+  </div>
+           
+</div>
+
+          <script type="text/javascript">
+         
+                    $(document).scroll(function() {
+              if ($(this).scrollTop() > 440) {
+                  $('#editBtn').css({ 
+                      "position" : 'fixed',
+                      "top" : 30,
+                      "background-color" : "transparent" ,
+                      "color" : "white" });
+              } else {
+                  $('#editBtn').css({ 
+                    "position" : 'fixed', 
+                    "top" : 30 ,
+                    "color" : "green"
+                      });
+              }
+          });
+          </script>
+      <div id="restauDash">
+          <div class="col-lg-12">
+         <div class="text-center">
+              <ul class="progressBar text-center">
+                <li class="active">Upload a valid Scanned document of Your restaurant to ensure Authenticity
+                    <input type="file" id="scannedDoc">
+                </li>
+                <li>Make Payments in order to activate your<span class="nkeksi-green"> nkeksi account</span></li>
+                <li>Finalizing Your Account Details</li>
+              </ul>            
+          </div>
+          </div>
+
+
+     <div class="container" style="font-family:Arial">
+        <div class="col-lg-10 col-lg-offset-1 col-md-12">
+          <h1>Notification Panel</h1>
+          <div class="well">
+          <p>
+            Lorem ipsum culpa velit aliquip aliquip cillum enim laborum id dolor velit irure pariatur commodo ad ut nulla cillum dolore ad anim ex pariatur esse laborum velit do duis amet.
+            Anim in sed dolor adipisicing consectetur officia sed ut incididunt voluptate labore nulla occaecat fugiat sint velit aute tempor esse amet laboris proident ut aliqua deserunt pariatur ut culpa magna fugiat amet occaecat in ut pariatur exercitation dolore consequat commodo amet veniam ut officia nisi sunt proident nulla id dolore culpa exercitation quis anim 
+          </p>
+          <div id="reserveWell">
+          </div>
+        </div>
+        </div>
+     </div>
+
+        <div class="container">
+        <div class="col-lg-12">
+          <h2 class="nkeksi-green">Menu Uploads & Restaurant Setup</h2>
+     <div class="table-responsive">
+                      <table class="table table-hover text-center">
+                    <thead>
+                      <tr>
+                        <td class="success nkeksi-green">No</td>
+                        <td class="success nkeksi-green">image of meal</td>
+                        <td class="success nkeksi-green">Cuisine Type</td>
+                        <td class="success nkeksi-green">Meal Description</td>
+                        <td class="success nkeksi-green">Meal</td>
+                        <td class="success nkeksi-green">Price</td>
+                      </tr>
+                    </thead>
+
+                    <tbody id="restauName">
+                      <tr>
+                          <td class="success nkeksi-green">1</td>
+                          <td class="primary nkeksi-green"><input type="file" name="image1" id="image1"></td>
+                          <td>
+                            <select class="multiselect" id="cusine1">
+                                        <option value="African cusine">African cusine</option>
+                                        <option value="European cusine">European cusine</option>
+                                        <option value="Chinese cusine">Chinese cusine</option>
+                                        <option value="Pizza">Pizza place</option>
+                                        <option value="Ice Cream Shop">Ice Cream Shop</option>
+                                        <option value="Cafe">Cafe</option>
+                                        <option value="Drinks">Drinks</option>
+                                        <option value="Salad">Salad</option>
+                                        <option value="Pastries">Pastries</option>
+                                        <option value="Potato and Plantain">POTATO AND PLANTAIN</option>
+                                        <option value="Cakes">Cakes</option>
+                                        <optgroup label="Rice">
+                                        <option value="Senegalais rice">Senegalais rice</option>
+                                        <option value="White rice">White rice</option>
+                                        <option value="Riz yassa">Riz yassa</option>
+                                      </optgroup>
+
+                              </select>
+                                  </td>
+                          <td><input type="text" name="meal1Desc" id="meal1Desc"></td>
+                          <td><input type="text" name="meal1" id="meal1"></td>
+                          <td><input type="text" name="price1" id="price1"></td>
+                          <td><button id="updateMenuFile1" class="btn btn-small btn-success">Upload Menu</button></td>
+                      </tr>
+                      <tr>
+                          <td class="success nkeksi-green">2</td>
+                          <td class="primary nkeksi-green"><input type="file" name="image2" id="image2"></td>
+                          <td>  <select class="multiselect" id="cusine2">
+                                        <option value="African cusine">African cusine</option>
+                                        <option value="European cusine">European cusine</option>
+                                        <option value="Chinese cusine">Chinese cusine</option>
+                                        <option value="Pizza">Pizza place</option>
+                                        <option value="Ice Cream Shop">Ice Cream Shop</option>
+                                        <option value="Cafe">Cafe</option>
+                                        <option value="Drinks">Drinks</option>
+                                        <option value="Salad">Salad</option>
+                                        <option value="Pastries">Pastries</option>
+                                        <option value="Potato and Plantain">POTATO AND PLANTAIN</option>
+                                        <option value="Cakes">Cakes</option>
+                                         <optgroup label="Rice">
+                                       <option value="Senegalais rice">Senegalais rice</option>
+                                        <option value="White rice">White rice</option>
+                                        <option value="Riz yassa">Riz yassa</option>
+                                      </optgroup>
+                                  </select>
+                                  </td>
+                          <td><input type="text" name="meal2Desc" id="meal2Desc"></td>
+                          <td><input type="text" name="meal2" id="meal2"></td>
+                          <td><input type="text" name="price2" id="price2"></td>
+                          <td><button id="updateMenuFile2" class="btn btn-small btn-success">Upload Menu</button></td>
+                      </tr>
+                      <tr>
+                          <td class="success nkeksi-green">3</td>
+                          <td class="primary nkeksi-green"><input type="file" name="image3" id="image3"></td>
+                          <td>  <select class="multiselect" id="cusine3">
+                                        <option value="African cusine">African cusine</option>
+                                        <option value="European cusine">European cusine</option>
+                                        <option value="Chinese cusine">Chinese cusine</option>
+                                        <option value="Pizza">Pizza place</option>
+                                        <option value="Ice Cream Shop">Ice Cream Shop</option>
+                                        <option value="Cafe">Cafe</option>
+                                        <option value="Drinks">Drinks</option>
+                                        <option value="Salad">Salad</option>
+                                        <option value="Pastries">Pastries</option>
+                                        <option value="Potato and Plantain">POTATO AND PLANTAIN</option>
+                                        <option value="Cakes">Cakes</option>
+                                        <optgroup label="Rice">
+                                       <option value="Senegalais rice">Senegalais rice</option>
+                                        <option value="White rice">White rice</option>
+                                        <option value="Riz yassa">Riz yassa</option>
+                                      </optgroup>
+
+                                            </select>
+                                            </td>
+                          <td><input type="text" name="meal3Desc" id="meal3Desc"></td>
+                          <td><input type="text" name="meal3" id="meal3"></td>
+                          <td><input type="text" name="price3" id="price3"></td>
+                          <td><button id="updateMenuFile3" class="btn btn-small btn-success">Upload Menu</button></td>
+                      </tr> 
+                       <tr>
+                          <td class="success nkeksi-green">4</td>
+                          <td class="primary nkeksi-green"><input type="file" name="image4" id="image4"></td>
+                          <td>  <select class="multiselect" id="cusine4">
+                                        <option value="African cusine">African cusine</option>
+                                        <option value="European cusine">European cusine</option>
+                                        <option value="Chinese cusine">Chinese cusine</option>
+                                        <option value="Pizza">Pizza place</option>
+                                        <option value="Ice Cream Shop">Ice Cream Shop</option>
+                                        <option value="Cafe">Cafe</option>
+                                        <option value="Drinks">Drinks</option>
+                                        <option value="Salad">Salad</option>
+                                        <option value="Pastries">Pastries</option>
+                                        <option value="Potato and Plantain">POTATO AND PLANTAIN</option>
+                                        <option value="Cakes">Cakes</option>
+                                         <optgroup label="Rice">
+                                        <option value="Senegalais rice">Senegalais rice</option>
+                                        <option value="White rice">White rice</option>
+                                        <option value="Riz yassa">Riz yassa</option>
+                                      </optgroup>
+
+                                      </select>
+                                      </td>
+                          <td><input type="text" name="meal4Desc" id="meal4Desc"></td>
+                          <td><input type="text" name="meal4" id="meal4"></td>
+                          <td><input type="text" name="price4" id="price4"></td>
+                          <td><button id="updateMenuFile4" class="btn btn-small btn-success">Upload Menu</button></td>
+                      </tr>
+                        <tr>
+                          <td class="success nkeksi-green">5</td>
+                          <td class="primary nkeksi-green"><input type="file" name="image5" id="image5"></td>
+                          <td>  <select class="multiselect" id="cusine5">
+                                        <option value="African cusine">African cusine</option>
+                                        <option value="European cusine">European cusine</option>
+                                        <option value="Chinese cusine">Chinese cusine</option>
+                                        <option value="Pizza">Pizza place</option>
+                                        <option value="Ice Cream Shop">Ice Cream Shop</option>
+                                        <option value="Cafe">Cafe</option>
+                                        <option value="Drinks">Drinks</option>
+                                        <option value="Salad">Salad</option>
+                                        <option value="Pastries">Pastries</option>
+                                        <option value="Potato and Plantain">Potato and Plantain</option>
+                                        <option value="Cakes">Cakes</option>
+                                         <optgroup label="Rice">
+                                        <option value="Senegalais rice">Senegalais rice</option>
+                                        <option value="White rice">White rice</option>
+                                        <option value="Riz yassa">Riz yassa</option>
+                                      </optgroup>
+                                </select>
+                                </td>
+                          <td><input type="text" name="meal5Desc" id="meal5Desc"></td>
+                          <td><input type="text" name="meal5" id="meal5"></td>
+                          <td><input type="text" name="price5" id="price5"></td>
+                          <td><button id="updateMenuFile5" class="btn btn-small btn-success">Upload Menu</button></td>
+                      </tr>
+                                         
+                    </tbody>
+                    <tfoot>
+                    </tfoot>
+                </table>
+                    
+              </div>  
+
+        </div>
+          <p class="clearfix"><p class="clearfix"><p class="clearfix">
+         <div class="col-lg-8 col-lg-offset-4">
+          <h1 style="color:#94b8b8;">Statistics &nbsp;<span class="glyphicon glyphicon-equalizer"></span></h1>
+          <img class="img-responsive" src="images/chart.png">
+        </div>
+
+        </div>
+
+   </div>
+
+   <div class="container">
+      <h2>Nkeksi review</h2>
+        <p class="text-center">
+          asdjasiodjsaoidjsioajdiosjadpojasoid
+        </p>
+   </div>
+
+
+ <div class="row footerdiv">
+      <div class="container-fluid text-center" id="top-page-link">
+        <a href="#" target="_top"><span class="text-left">top</span></a>
+      </div>
+<p class="clearfix"/>
+<p class="clearfix"/>
+<footer class="">
+
+        <div class="col-lg-4 footer-left text-center">
+          <p class="text-center">partner with us <span class="glyphicon glyphicon-hand-down"></span></p>
+  <a href="restaurant_partner.html"><button type="button" class="btn btn-success">Become a Restaurant Partner</button></a><br><br>
+  <a href="supermarket_partner.html"><button type="button" class="btn btn-success">Become a Supermarket Partner</button></a>
+
+        </div>
+
+        <div class="col-lg-4 footer-center text-center">
+          <div class="">
+          <p>Get Our App for free.</p>
+          <img src="images/outofdate-badge_no.png" class="center-block img-responsive">
+          </div>
+<p class="clearfix">
+        <div class="copyright">
+          <p>
+             &copy; 2017 www.nkeksi.com ...<br>
+            Designed by Fireflies Technologies.
+          </p>
+        </div>
+       </div>
+
+        <div class="col-lg-3 col-lg-offset-1 footer-right text-center">
+                <div class="footer-links" style="text-align:left">
+                  <li><a href="#">Help</a></li>
+                  <li><a href="privacy.html">Privacy Policy</a></li>
+                  <li><a href="terms_conditions.html">Terms of use</a></li>
+                  <li><a href="#">FAQs</a></li>
+                  <li></li>
+                </div>
+               <div class="footer-icons">
+                <p class="clearfix"/>
+                        <p>Catch us on social media</p>
+                    <a href="https://www.facebook.com/Nkeksi-1582529698444155"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                    <a href="https://www.instagram.com/nkeksi"><i class="fa fa-instagram"></i></a>
+
+              </div>
+          <p class="clearfix">
+          <p class="clearfix">
+        </div>
+    </footer>
+</div>
+
+
+
+
+</div><!--end of container fluid -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery2.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+  <script type="text/javascript" src="js/sweetalert.min.js"></script>
+<script type="text/javascript" src="js/loader.js"></script>
+<script type="text/javascript" src="js/partners.js"></script>
+<!--   // <script type="text/javascript" src="js/login.js"></script>
+  // <script type="text/javascript" src="js/main.js"></script>
+  // <script type="text/javascript" src="js/restau.js"></script> -->
+
+
+
+
+  </body>
+  
+</html>

@@ -1,0 +1,152 @@
+/*====================
+	Global styles
+======================
+*/
+.welcome-page{
+	padding-top: 100px;
+}
+
+
+.splashpage{
+	height: 100%;
+
+}
+
+.welcome-title{
+	font-size: 50px;
+	color:#4CAF50;
+	padding-bottom: 50px;
+}
+
+
+/*====================
+	Navigation Bar
+======================
+*/
+
+.logo-title{
+  color:#4CAF50;
+  font-size:30px;
+}
+
+
+.header-btn , .header-btn:hover{
+
+  background-color:#4CAF50;
+  color: white;
+  margin:10px 4px 2px 2px;
+  border-radius: 6px;
+
+}
+
+.header-title{
+	text-transform: uppercase;
+	text-decoration: underline;
+	color: green;
+	font-weight: bold;
+	background-color: white;
+}
+
+.header-img{
+	background:#fff url(../images/abstract-1239143_1920.jpg) no-repeat top center;
+	height: 350px;
+	border-bottom: 20px solid transparent;
+    -webkit-border-image: url("../images/bamboo.png") 80 round; /* Safari 3.1-5 */
+    -o-border-image: url("../images/bamboo.png") 80 round; /* Opera 11-12.1 */
+    border-image: url("../images/bamboo.png") 80 round;
+    filter: blur(1px);
+	filter: brightness(50%);
+	
+
+
+}
+
+div#location-div {
+
+background-color: white;
+margin-top: -275px;
+margin-bottom: 150px;
+}
+
+
+h1.location-header-title{
+	text-transform: uppercase;
+	font-weight: bold;
+	color: white;
+	font-size: 30px;
+}
+
+.bottom-title{
+	color: green;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+
+/*===========================
+	DIV FOR DISHES
+==============================
+*/
+
+#div-dish {
+	position: relative;
+}
+
+
+figure >a>img.food-view{
+	height: 235px;
+
+}
+
+span.price-id {
+	font-family: Arial;
+}
+
+.food-view:hover{
+	opacity: 0.9;
+	filter: brightness(90%);
+
+}
+
+span.currency{
+
+	text-transform: uppercase;
+	font-size: 18px;
+	color: gold;
+}
+
+#div-rotate {
+	position: absolute;
+	background-color: green;
+	width: 100px;
+	color: white;
+	font-size: 20px;
+	top: 20px;
+	margin-left: -10px;
+    -ms-transform: rotate(-30deg); /* IE 9 */
+    -webkit-transform: rotate(-30deg); /* Chrome, Safari, Opera */
+    transform: rotate(-30deg);
+	z-index: 100;
+}
+
+
+@media (max-width: 415px){
+
+#myModalLabel{
+font-size: 20px;
+
+}
+
+.welcome-page{
+	padding-top: 20px;
+}
+
+
+
+.welcome-title{
+	font-size: 30px;
+	color:#4CAF50;
+	
+}
+
+}

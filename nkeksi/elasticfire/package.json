@@ -1,0 +1,87 @@
+{
+  "_from": "elasticfire",
+  "_id": "elasticfire@1.0.2",
+  "_inBundle": false,
+  "_integrity": "sha1-McGc5xAjl17Wvejhix0XRys896c=",
+  "_location": "/elasticfire",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "elasticfire",
+    "name": "elasticfire",
+    "escapedName": "elasticfire",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/elasticfire/-/elasticfire-1.0.2.tgz",
+  "_shasum": "31c19ce71023975ed6bde8e18b1d17472b3cf7a7",
+  "_spec": "elasticfire",
+  "_where": "/root/Desktop/ok/nkeksi",
+  "author": {
+    "name": "Bloggify",
+    "email": "support@bloggify.org",
+    "url": "https://bloggify.org"
+  },
+  "blah": {
+    "h_img": "https://i.imgur.com/WnGtDhC.png",
+    "description": [
+      {
+        "h2": ":rocket: Features"
+      },
+      {
+        "ul": [
+          "Easily configure the way how the data should be taken from Firebase",
+          "Filter out documents",
+          "Include and exclude specific fields",
+          "Support for joins"
+        ]
+      }
+    ],
+    "thanks": "[`flashlight`](https://github.com/firebase/flashlight) was the main inspiration for this project. :cake:"
+  },
+  "bugs": {
+    "url": "https://github.com/Bloggify/elasticfire/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "elasticsearch": "^11.0.1",
+    "firebase": "^3.5.2",
+    "obj-unflatten": "^1.0.4",
+    "ul": "^5.2.9"
+  },
+  "deprecated": false,
+  "description": "A flexibe and configurable module to connect Firebase with Elasticsearch.",
+  "devDependencies": {},
+  "directories": {
+    "example": "example"
+  },
+  "files": [
+    "bin/",
+    "app/",
+    "lib/",
+    "dist/",
+    "src/",
+    "resources/",
+    "menu/",
+    "cli.js",
+    "index.js"
+  ],
+  "homepage": "https://github.com/Bloggify/elasticfire#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "name": "elasticfire",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bloggify/elasticfire.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.2"
+}

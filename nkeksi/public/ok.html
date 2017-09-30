@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbQxa2GdgFEM3CgrdshdwH2bDOcMbp7wc &callback=initMap"></script>
+<script type="text/javascript">
+    function initMap() {
+
+        getLocation();
+
+
+    }
+    function showLocation(position) {
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+        alert("Latitude : " + latitude + " Longitude: " + longitude);
+
+
+        var coordinates = new google.maps.LatLng(latitude, longitude);
+        // var resToCoords = new google.maps.LatLng(4.8840742576061045 , 10.366629928125008);
+
+        var mapOptions = {
+            zoom: 14,
+            center: coordinates,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+
+        }
+
+        var map = new google.maps.Map(document.getElementById("mapResto"), mapOptions);
+        var marker = new google.maps.Marker({map: map, position: coordinates})
+
+    }
+
+    function errorHandler(err) {
+        if (err.code == 1) {
+            alert("Error: Access is denied!");
+        } else if (err.code == 2) {
+            alert("Error: Position is unavailable!");
+        }
+    }
+
+
+    function getLocation() {
+
+        if (navigator.geolocation) {
+            // timeout at 60000 milliseconds (60 seconds)
+            var options = {timeout: 60000};
+            navigator.geolocation.getCurrentPosition(showLocation,
+                errorHandler,
+                options);
+        } else {
+            alert("Sorry, browser does not support geolocation!");
+        }
+    }
+
+</script>
+</head>
+<html>
+
+   <form>
+     <input type="button" onclick="getLocation();"  
+                             value="Get Location"/>
+   </form>
+
+
+   <div class="col-lg-12" id="restauMap">
+       <div id="mapResto">
+
+       </div>
+   </div>
+</body>
+</html>

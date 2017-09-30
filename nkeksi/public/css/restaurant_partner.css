@@ -1,0 +1,185 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*=============================
+	CAROSEL FOR PARTNERS PAGE
+===============================
+*/
+.spinner-load {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px; /* half width of the spinner gif */
+    margin-top: -50px; /* half height of the spinner gif */
+    text-align:center;
+    z-index:1234;
+    overflow: auto;
+    width: 100px; /* width of the spinner gif */
+    height: 102px; /*hight of the spinner gif +2px to fix IE8 issue */
+}
+
+
+.restau-partner-slide{
+	
+	height: 100%;
+	border: 0px;
+	
+}
+
+#partner-slide1{
+
+height: 100%;
+
+}
+
+.carousel-caption{
+	color: white;
+	left: 0px;
+	top: 0;
+	text-align: left;
+	padding-left: 15px;
+	padding-top: 0;
+	margin: 0;
+}
+
+.carousel-caption h2{
+	font-size: 40px;
+}
+
+
+/*=================================
+	FORM MODAL CONTROL FOR PARTNERS PAGE
+===================================
+*/
+
+.EmailAndPasswordValidate{
+		
+		border: 1px solid #b30000;
+		display: block;
+		color: #b30000;
+
+}
+
+
+/*=================================
+	FORM CONTROL FOR PARTNERS PAGE
+===================================
+*/
+
+div#partner-description p{
+	font-size: 20px;
+	font-weight: 1ex;
+	color: red;
+}
+
+/*=================================
+	FORM CONTROL FOR PARTNERS PAGE
+===================================
+*/
+
+
+.submitBtn , .submitBtn:hover {
+	border-radius: 0;
+	border: 1px solid #ccc;
+	padding: 5px;
+	background-color: green;
+	color: white;
+	
+}
+
+
+#notificationPanel{
+	display: block;
+	height: 350px;
+	overflow-y: scroll;
+
+}
+
+progress{
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+	height: 5px;
+	border: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+	background: #eff;
+}
+
+progress::-moz-progress-bar { background:  #4CAF50; }
+progress::-moz-progress-value { background: #4CAF50; }
+
+
+progress::-webkit-progress-bar { background: #4CAF50; }
+progress::-webkit-progress-value { background: #4CAF50; }
+
+.spin{
+
+	-webkit-animation: spin 2s linear infinite;
+	-o-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+}
+@media (max-width: 415px){
+
+
+.restau-partner-slide {
+	
+	height: 100%;
+	border: 0px;
+	
+}
+
+	#partner-slide1 > img{
+
+	height: 100%;
+
+	}
+
+	#partner-slide2 > img{
+
+	height: 100%;
+
+	}
+	#partner-slide3 > img{
+
+	height: 240px;
+
+	}
+	#partner-slide4 > img{
+
+	height: 240px;
+
+	}
+	#partner-slide5 > img{
+
+	height: 250px;
+
+	}
+	#partner-slide6 > img{
+
+	height: 250px;
+
+	}
+
+	.carousel-caption {
+	color: white;
+	left: 0px;
+	top: 0;
+	text-align: left;
+	padding-left: 15px;
+	padding-top: 0;
+	margin: 0;
+}
+
+.carousel-caption h2 {
+	font-size: 22px;
+}
+
+.restau-phrase {
+		font-size: 25px;
+
+
+}
+
+}

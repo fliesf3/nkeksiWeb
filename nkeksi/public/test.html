@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="js/growl/css/growl.css">
+
+<style type="text/css">
+body {
+  background-color:wsadhite;
+
+}
+
+.preloader{
+  position: absolute;top: 48%;left: 48%;z-index: 1;height: 40px;width: 40px;transform: translate(-50%, -50);}[class^="ball-"] {position: absolute;display: block;left: 30px;width: 12px;height: 12px;border-radius: 6px;transition: all 0.5s;animation: circleRotate 4s both infinite;transform-origin: 0 250% 0;}@keyframes circleRotate {0% {transform: rotate(0deg);}100% {transform: rotate(1440deg);}}.ball-1 {z-index: -1;background-color: #2196F3;animation-timing-function: cubic-bezier(0.5, 0.3, 0.9, 0.9);}.ball-2 {z-index: -2;background-color: #03A9F4;animation-timing-function: cubic-bezier(0.5, 0.6, 0.9, 0.9);}.ball-3 {z-index: -3;background-color: #00BCD4;animation-timing-function: cubic-bezier(0.5, 0.9, 0.9, 0.9);}.ball-4 {z-index: -4;background-color: #009688;animation-timing-function: cubic-bezier(0.5, 1.2, 0.9, 0.9);}.ball-5 {z-index: -5;background-color: #4CAF50;animation-timing-function: cubic-bezier(0.5, 1.5, 0.9, 0.9);}.ball-6 {z-index: -6;background-color: #8BC34A;animation-timing-function: cubic-bezier(0.5, 1.8, 0.9, 0.9);}.ball-7 {z-index: -7;background-color: #CDDC39;animation-timing-function: cubic-bezier(0.5, 2.1, 0.9, 0.9);}.ball-8 {z-index: -8;background-color: #FFEB3B;animation-timing-function: cubic-bezier(0.5, 2.4, 0.9, 0.9);}
+
+</style>
+
+
+</head>
+<body>
+ <!--  <div class="loadpop" style="text-align:center;width:100%;height:100%;position:fixed;top:0;left:0;z-index:99999;background:rgba(85, 98, 112, 0.93);">
+    <img src="https://akap.online/images/loads.gif" style="display:table;margin:1% auto;width: 100%;max-width: 500px;" />
+    <header class="major" style="width: 100%;">
+        <h1>Good things take time !</h1>
+                <h3>In any investment, you expect to have fun and make money!</h3>
+        <p>Please wait for the page to load completely</p>
+    </header>
+</div>
+
+<p>sjkasdhjkashdjkasdhjkashdjkashdjksad</p>
+ -->  
+
+<!--  <div class="preloader">
+  <span class="ball-1"></span>
+  <span class="ball-2"></span>
+  <span class="ball-3"></span>
+  <span class="ball-4"></span>
+  <span class="ball-5"></span>
+  <span class="ball-6"></span>
+  <span class="ball-7"></span>
+  <span class="ball-8"></span>
+</div> -->
+  
+      <p>
+        <h3>Is it difficult - Hell, no!</h3>
+        <button id="btnExSimple" type="button">simple example</button> 
+        <button id="btnExIcon" type="button">sticky icon example</button> 
+        ...you like it? 
+        <button id="btnExLove" type="button">show some...</button> &amp; <strong><a href="https://github.com/aheinze/Growl">get the code.</a></strong>
+      </p>
+
+      <audio controls>
+     <source src="audio/just-like-magic.mp3" class="hidden" type='audio/mp4'>
+ <!-- The next two lines are only executed if the browser doesn't support MP4 files -->
+ <!-- The next line will only be executed if the browser doesn't support the <audio> tag-->
+ <p>Your user agent does not support the HTML5 Audio element.</p>
+      </audio>
+      
+
+</body>
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery2.js"></script>
+  <script type="text/javascript" src="js/growl/js/growl.js"></script>
+ <script type="text/javascript">
+    
+    $(function(){
+      
+      $("#btnExSimple").bind("click",function(){
+        $.Growl.show("That was easy!!");
+      });
+      
+      $("#btnExIcon").bind("click",function(){
+        $.Growl.show("That was easy too!!", {
+          'title'  : "Icon Example",
+          'icon'   : "parachute",
+          'timeout': false
+        });
+      });
+      
+      $("#btnExLove").bind("click",function(){
+        $.Growl.show($("#donate").html(), {
+          'title'  : "Show some love...",
+          'icon'   : "heart",
+          'timeout': false
+        });
+      });
+
+    });
+    
+  
+  </script>
+<script>
+    $(document).ready(function(){
+        $(".loadpop").hide();
+    });
+  function ajaxing(method,succ,datas={}){
+    $.ajax({
+      url:"?ajaxing=true&method="+method,
+      method:"POST",
+      data: datas,
+      success: succ,
+      error: function(textStatus){
+        alert(textStatus);
+      }
+      
+    });
+  }
+</script>
+</html>

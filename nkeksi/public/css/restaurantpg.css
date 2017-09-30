@@ -1,0 +1,124 @@
+
+.nkeksi-border{
+ 	border: 10px solid transparent;
+
+    -webkit-border-image: url("../images/bamboo.png") 80 round; /* Safari 3.1-5 */
+    -o-border-image: url("../images/bamboo.png") 80 round; /* Opera 11-12.1 */
+    border-image: url("../images/bamboo.png") 80 round;
+
+}
+
+#restauMap{
+
+	height: 350px;
+}
+
+.searchMeal{
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+}
+ 
+.searchMeal input#search{
+  height: 100px;
+  background: #ffffff;
+  border:0px;
+  float: left;
+  color: #262626;
+  font-size: 30px;
+  padding-left: 45px;
+  border-bottom: 3px solid green;
+  color: #333;
+}
+
+.searchMeal .icon{
+  position: absolute;
+  z-index: 1;
+  color:green;
+  bottom: -60px;
+  right: 10px;
+   -webkit-transition: all .55s ease;
+  -moz-transition: all .55s ease;
+  -ms-transition: all .55s ease;
+  -o-transition: all .55s ease;
+  transition: all .55s ease;
+}
+
+
+.searchMeal input#search:focus, .searchMeal input#search:active{
+    outline:none; 
+}
+ 
+.searchMeal:hover .icon{
+  margin-top: 16px;
+  color: #93a2ad;
+ 
+  -webkit-transform:scale(1.5); /* Safari and Chrome */
+  -moz-transform:scale(1.5); /* Firefox */
+  -ms-transform:scale(1.5); /* IE 9 */
+  -o-transform:scale(1.5); /* Opera */
+   transform:scale(1.5);
+  }
+
+.searchMeal input#search::-webkit-input-placeholder {
+   color: #65737e;
+}
+ 
+.searchMeal input#search:-moz-placeholder { /* Firefox 18- */
+   color: #65737e;  
+}
+ 
+.searchMeal input#search::-moz-placeholder {  /* Firefox 19+ */
+   color: #65737e;  
+}
+ 
+.searchMeal input#search:-ms-input-placeholder {  
+   color: #65737e;  
+}
+
+
+/*
+==============================
+        CART DESIGN
+==============================
+*/
+
+.cart-total{background: none repeat scroll 0 0 #F8F8F3;}
+
+.shopp,.cart-total{ 
+  border:solid #E8E7DC 1px; padding:8px; 
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px; font-size:12px;
+  background:url(remove.png) center right no-repeat 5px;
+  border-radius: 8px; 
+  font-family:"LubalGraphBdBTBold",Tahoma; 
+  margin-top:3px;
+  width:320px;
+  }
+
+i.remove{float:right;cursor:pointer;}
+
+div.label{float: left}
+
+
+@media (max-width: 415px){
+
+div.Restaurant-title h2{
+	color: green;
+	font-size: 18px;
+}
+
+div.Restaurant-title h3{
+	color: white;
+	font-size: 13px;
+
+}
+
+#restauMap > img{
+
+	height: 250px;
+	margin-bottom: 0;
+}
+
+
+}

@@ -1,0 +1,136 @@
+.restau-bg{
+background: #fff url("../images/pexels-photo-263173(1).jpeg");
+opacity: 0.8;
+filter: alpha(opacity=0.7);
+
+}
+
+.glyphiconSearch:hover{
+	color: red;
+	cursor: pointer;
+display: inline;
+vertical-align: middle;
+z-index: 100;
+}
+
+.green-button , .green-button:hover{
+	background-color: green;
+}
+
+
+.restau-div{
+	font-family: Helvetica;
+	background-color: black;
+	color: white;
+	opacity:0.9;
+	filter: brightness(120%);
+}
+
+/*
+============================
+	restaurant styling page
+=============================
+
+*/
+
+.searchloader {
+	text-align: center;
+}
+.searchloader span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 10px;
+	height: 10px;
+	margin: 50px auto;
+	background: forestgreen;
+	border-radius: 50px;
+	-webkit-animation: searchloader 0.9s infinite alternate;
+	-moz-animation: searchloader 0.9s infinite alternate;
+}
+.searchloader span:nth-of-type(2) {
+	-webkit-animation-delay: 0.3s;
+	-moz-animation-delay: 0.3s;
+}
+.searchloader span:nth-of-type(3) {
+	-webkit-animation-delay: 0.6s;
+	-moz-animation-delay: 0.6s;
+}
+@-webkit-keyframes searchloader {
+	0% {
+		width: 10px;
+		height: 10px;
+		opacity: 0.9;
+		-webkit-transform: translateY(0);
+	}
+	100% {
+		width: 24px;
+		height: 24px;
+		opacity: 0.1;
+		-webkit-transform: translateY(-21px);
+	}
+}
+@-moz-keyframes searchloader {
+	0% {
+		width: 10px;
+		height: 10px;
+		opacity: 0.9;
+		-moz-transform: translateY(0);
+	}
+	100% {
+		width: 24px;
+		height: 24px;
+		opacity: 0.1;
+		-moz-transform: translateY(-21px);
+	}
+}
+
+
+.restau-credentials{
+	font-family: Helvetica;
+	color: black;
+	
+}
+
+
+
+span.star{
+	
+	font-size: 16px;
+	color: white
+}
+
+.badge{
+	background-color: green;
+	color: green;
+	padding-left:3px 6px;
+	width: 30px;
+	height:23px;
+	border-radius: 80%;
+	font-size: 16px;
+}
+
+.like{
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.like-div{
+	position: absolute;
+	bottom: 20px;
+	right:20px;
+	cursor: pointer;
+
+}
+
+
+/*=======================
+	MAIN MEDIA QUERIES 
+=========================
+*/
+
+@media (max-width: 415px){
+
+.green-button , .green-button:hover{
+SSSSSS}
+
+}

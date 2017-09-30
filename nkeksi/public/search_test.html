@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>s</title>
+</head>
+<body>
+<script src="js/jquery.js"></script>
+    <script src="js/jquery2.js"></script>
+<script type="text/javascript">
+
+    $('#search').click(function (event) {
+        var searchedValue = $('#searchInput').val();
+        $.ajax({
+            url: "search.html", // Your API search URL
+            type: "GET",
+            data: {q: searchedValue}, // Your query parameter
+            dataType: "json",
+            timeout: 5000,
+            context: this,
+            beforeSend: function () {
+                $('#content').fadeTo(500, 0.5);
+            },
+            success: function (data, textStatus) {
+                $('html, body').animate({
+                    scrollTop: '0px'
+                }, 300);
+                $('#content').html(data.objects[0].category+'<br>'+data.objects[0].company);
+            },
+            error: function (x, t, m) {
+                if (t === "timeout") {
+                    alert("Request timeout");
+                } else {
+                    alert('Request error');
+                }
+            },
+            complete: function () {
+                $('#content').fadeTo(500, 1);
+            }
+        });
+    });
+</script>
+
+<input type="text" name="searchInput" id="searchInput">
+<button type="button" id="search">search</button>
+
+<div id="searchResults">
+</div>
+</body>
+</html>

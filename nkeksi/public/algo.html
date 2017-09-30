@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+  <title>Algolia | User Search</title>
+  <style>
+    .search {
+      text-align: center;
+    }
+    .search input {
+      font-size: 20px;
+      width: 300px;
+    }
+    .results {
+      margin: auto;
+      text-align: center;
+    }
+    .results ul {
+      list-style-type: none;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="search">
+    <h1>Search users in real time</h1>
+    <input type="text">
+  </div>
+  <div class="results">
+    <ul id="users"></ul>
+  </div>
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"></script>
+
+  <script>
+    var $input = $('input');
+    var $users = $('#users');
+
+
+    $(document).ready(function() {
+var client = algoliasearch("39KNPXSI55", "d5b98d6f72e87899ad7ad295399c8d88");
+var index = client.initIndex('nkeksi');
+
+      $input.keyup(function() {
+        index.search($input.val(), {
+          hitsPerPage: 10,
+          facets: '*'
+        }, searchCallback);
+      }).focus();
+    });
+
+    function searchCallback(err, content) {
+      if (err) {
+        console.error(err);
+        return;
+      }
+
+      $users.empty();
+
+      for (var i = 0; i < content.hits.length; i++) {
+        $users.append('<li>' + content.hits[i].users.qpzgsHEYJdgDhQDIuloKIFLLjDa2.email + '</li>');
+      }
+    };
+  </script>
+</body>
+</html>

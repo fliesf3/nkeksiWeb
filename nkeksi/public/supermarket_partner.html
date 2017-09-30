@@ -1,0 +1,380 @@
+<!Doctype>
+<html>
+  <head>
+    <title>Nkeksi.com</title>
+            <link rel="shortcut icon" href="images/test.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+<!-- Latest compiled and minified CSS -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-104509568-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
+
+<!--Font Awesome (added because you use icons in your prepend/append)-->
+<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+    
+    <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: #000000}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: #1bb01b !important;}.bootstrap-iso .outline, .bootstrap-iso .outline:focus{background-color: transparent; border: 2px solid #5cb85c} .bootstrap-iso .outline:hover{background-color: transparent; border: 2px solid#84e084; color: #84e084 !important}.bootstrap-iso .form-control:focus { border-color: #18c030;  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(24, 192, 48, 0.6); box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(24, 192, 48, 0.6);} .asteriskField{color: red;}.bootstrap-iso form .input-group-addon {color:#20850a; background-color: #eeeeee; border-radius: 4px; padding-left:12px}</style> 
+
+      <link href="css/main.css" rel="stylesheet">
+      <link href="css/main2.css" rel="stylesheet">
+      <link href="css/restaurant.css" rel="stylesheet">
+      <link href="css/restaurantpg.css" rel="stylesheet">
+      <link href="css/supermarket.css" rel="stylesheet">
+      <link href="css/sweetalert.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="css/google.css">
+      <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+      <script src="https://use.fontawesome.com/7ff44754f3.js"></script>
+      <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
+      <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+      <link rel="stylesheet" href="js/build/css/intlTelInput.css">
+      <link rel="stylesheet" href="js/build/css/demo.css">
+
+  </head>
+
+  <body>
+      <script type="text/javascript" src="js/notify.min.js"></script>
+      <script type="text/javascript" src="js/sweetalert.min.js"></script>
+
+<!-- Modal section for the sign in and register button -->
+<!-- Modal for sign -->
+
+<div class="modal fade modal-register" id="googleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="font-family:Arial;">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+ <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="false"><img src="images/quit.png" class="img-responsive"></span></button>
+        <h2 class="modal-title text-center" id="myModalLabel">Verify your Info to proceed</h2>
+        <div class="row text-center">
+            <div class="text-center center-block">
+                  <img id="googlePic" class="profile-img img-circle" width="90px" src="" alt="profile image">
+                  </div>
+          </div>
+      </div>
+
+ <!--    <form method="post"> -->
+<div class="modal-body">
+<div class="bootstrap-iso">
+ <div class="container-fluid">
+  <div class="row">  
+   <div class="col-md-12 col-sm-12 col-xs-12">
+
+
+     <div class="form-group">
+      <label class="control-label requiredField" for="name">
+       Username
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <div class="input-group">
+       <div class="input-group-addon">
+        <i class="fa fa-bookmark nkeksi-green">
+        </i>
+       </div>
+       <input class="form-control" id="googleFirstName" name="googleFirstName" placeholder="enter your first name (username)" type="text"/>
+      </div>
+     </div>
+
+     <div class="form-group ">
+      <label class="control-label requiredField" for="googleLastName">
+       Last name
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <div class="input-group">
+       <div class="input-group-addon">
+        <i class="fa fa-bookmark nkeksi-green">
+        </i>
+       </div>
+       <input class="form-control" id="googleLastName" name="googleLastName" placeholder="enter your last name" type="text"/>
+      </div>
+     </div>
+
+     <div class="form-group ">
+      <label class="control-label requiredField" for="googleTel">
+       Telephone
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <div class="input-group">
+       <div class="input-group-addon">
+        <i class="fa fa-phone nkeksi-green">
+        </i>
+       </div>
+       <input class="register-input" id="googlePhone" name="googlePhone" placeholder="enter your telephone number" type="text"/>
+      </div>
+     </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+     <div class="modal-footer">
+     <div class="form-group">
+      <div>
+       <button id="submitGoogle" class="btn btn-success btn-sm outline nkeksi-green" type="button">
+        Submit
+       </button>
+      </div>
+     </div> 
+   </div>
+
+
+  </div>
+ </div>
+</div>
+
+
+
+<div class="modal fade modal-register specialModal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="false"><img src="images/quit.png" class="img-responsive"></span></button>
+        <h4 class="modal-title text-center" id="myModalLabel"><u>SIGN IN</u></h4><br>
+        <center>
+        <span class="green">To start using Nkeksi, please kindly sign in by </span><br />
+          <span class="green">providing the following information in this form.</span>
+       </center>
+      </div>
+
+           <!-- form commence here -->
+      <div class="modal-body">
+
+<div>
+  <div style="box-sizing: border-box; font-family: ff-clan-web-pro,&quot;Helvetica Neue&quot;,Helvetica,sans-serif; font-weight: 500; font-size: 14px; line-height: 24px; color: rgb(62, 62, 62); margin-bottom: 24px;padding:0 20px 0 20px;">
+
+    <label class="register-label" for="inputEmail">Email</label>
+    <input class="register-input" placeholder="name@example.com" type="text" id="inputEmail"><br><br>
+    <label class="register-label" for="inputPassword">Password</label>
+    <input class="register-input" placeholder="At least 6 characters" type="password" id="inputPassword">
+
+  </div>
+</div>
+
+      </div><!-- end of modal body -->
+
+      <div class="modal-footer">
+        <div class="col-md-12 col-lg-12 col-xs-12">
+          <p class="text-center">Forgot your password?<a href="#" id="resetPassword" class="red"> Click here</a></p>
+        </div><p class="clearfix">
+         <div class="form-group">
+          
+          <div class="col-md-4 col-md-offset-4 col-offset-xs-12 col-xs-6">
+<button id="googleLogin" class="btn btn-block btn-social btn-google orange" style=""><span class="fa fa-google"></span> | Sign in with Google </button>
+            </div>
+            <p class="clearfix"/>
+            <div class="col-md-4 col-md-offset-4 col-offset-xs-12 col-xs-6">
+            <center><button id="btnlogin" class="btn btn-default btn-success signButton">Sign in</button></center>
+          </div>
+
+        </div>
+      </div><!-- end of modal footer-->
+
+   <!-- end of form -->
+
+
+</div>
+</div>
+</div>
+<!-- end of the modal register-->
+
+
+
+<!-- Modal for register -->
+<div class="modal fade modal-register" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="false"><img src="images/quit.png" class="img-responsive"></span></button>
+       <!-- Indicators -->
+          <ol class="modal-indicators">
+            <li id="dot1" class="active"></li>
+            <li id="dot2"></li>
+            <li id="dot3"></li>
+          </ol>
+        <p class="fixclear">
+        <h1 class="modal-title text-center" id="myModalLabel"><u>ACCOUNT</u></h1><br>
+        <p class="green">By creating an account you will be able to see awesome features of Nkeksi.
+        </p>
+      </div>
+
+       <!-- form commence here -->
+      <div class="modal-body">
+
+<div id="block1" class="frm">
+  <div style="box-sizing: border-box; font-family: ff-clan-web-pro,&quot;Helvetica Neue&quot;,Helvetica,sans-serif; font-weight: 500; font-size: 14px; line-height: 24px; color: rgb(62, 62, 62); margin-bottom: 24px;padding:0 20px 0 20px;">
+
+    <label class="register-label">First Name</label>
+    <input class="register-input" placeholder="first name here" type="text" id="FirstName"><br><br>
+    <label class="register-label">Last name</label>
+    <input class="register-input" placeholder="last name here" type="text" id="LastName">
+
+  </div>
+</div>
+
+
+<div id="block2"  class="frm" style="display: none;">
+  <div style="box-sizing: border-box; font-family: ff-clan-web-pro,&quot;Helvetica Neue&quot;,Helvetica,sans-serif; font-weight: 500; font-size: 14px; line-height: 24px; color: rgb(62, 62, 62); margin-bottom: 24px;padding:0 20px 0 20px;">
+
+    <label class="register-label">Email</label>
+    <input class="register-input" placeholder="name@example.com" type="email" id="RegisterEmail"><br><br>
+    <label class="register-label">Phone Number</label>
+    <input class="register-input" id="phonenum" type="tel">
+<!--     <input class="register-input" placeholder="(+237)xxx-xxx-xxx" type="text" id="phonenum">
+ -->
+  </div>
+</div>
+
+<div id="block3"  class="form2" style="display: none;">
+  <div style="box-sizing: border-box; font-family: ff-clan-web-pro,&quot;Helvetica Neue&quot;,Helvetica,sans-serif; font-weight: 500; font-size: 14px; line-height: 24px; color: rgb(62, 62, 62); margin-bottom: 24px;padding:0 20px 0 20px;">
+
+    <label class="register-label">Password</label>
+    <input class="register-input" placeholder="At least 6 characters" type="password" id="RegisterPassword"><br><br>
+    <label class="register-label">Confirm Password</label>
+    <input class="register-input" placeholder="Re-type Password" type="password" id="ConfirmPassword">
+
+  </div>
+</div>
+
+
+      </div><!-- end of modal body -->
+
+      <div class="modal-footer">
+        <div class="col-sm-8">
+          Are you already a user?<a id="signInLabel" data-toggle="modal" class="nkeksi-green signInLabel"> Sign In</a>
+        </div><p class="clearfix">
+         <div class="form-group">
+          <div id="blk1" class="col-sm-offset-3 col-sm-8">
+                <button  id="open1" class="btn btn-success" type="button">Next <span class="fa fa-arrow-right"></span></button>
+          </div>
+          <div id="blk2" class="form2 col-sm-offset-3 col-sm-8" style="display: none;">
+                <button id="back1" class="btn  nkeksi-green" type="button"><span class="fa fa-arrow-left"></span> Back</button> 
+                <button id="open2"  class="btn btn-success" type="button">Next <span class="fa fa-arrow-right"></span></button> 
+          </div>
+          <div id="blk3" class="col-sm-offset-3 col-sm-8" style="display: none;">
+                <button id="back2" class="btn  nkeksi-green" type="button"><span class="fa fa-arrow-left"></span> Back</button> 
+                <button  id="btnsignin" class="btn btn-success" type="button">Submit </button>
+          </div>
+        </div>
+      </div><!-- end of modal footer-->
+
+    <!-- end of form -->
+
+    </div>
+  </div>
+</div>
+<!-- end of the modal register-->
+
+
+
+
+<div class="container-fluid">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar green-bg"></span>
+          <span class="icon-bar green-bg"></span>
+          <span class="icon-bar green-bg"></span>
+        </button>
+        <a class="navbar-brand header-nav" href="index.html" style="margin-top:-10px;">
+        <img src="images/real_logo.png" alt="nkeksi-logo" title="nkeksi-logo" width="140">
+        </a>
+      </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                 <ul class="nav navbar-nav navbar-right">
+              <!-- Buttons to give a modal -->
+                <li><button id="primarySignin" type="button" class="btn btn-success header-btn show" data-toggle="modal" data-target="#myModal">SIGN IN</button></li>                    
+                <li><button id="primaryRegister" type="button" class="btn btn-success header-btn show" data-toggle="modal" data-target="#myModal2">REGISTER</button></li>
+                <li><a id="displayUsername"><span class="displayUsername"></span></a></li>
+                <li><img id="silie" src="images/usericon.png" height="60" width="60" class="img-respnsive img-circle hidden" data-category="Site-Wide Custom Events" data-label="User avatar" tabindex="0"></li>
+                  <li><button id="btnlogout" type="button" class="btn btn-success header-btn hidden">SIGN OUT</button></li>
+
+                  
+                 </ul>
+             </div>
+           </div>
+  </nav>
+
+
+
+
+<div class="row">
+      <div class="col-lg-12 col-md-12 col-xs-12 text-center head-img">
+      <h1 class="nkeksi-green">NOT YET AVAILABLE...</h1>
+   
+   <p class="clearfix">
+
+            <p class="nkeksi-green">
+             &copy; 2017 www.nkeksi.com <br>
+            powered by Fireflies Technologies.
+          </p>
+
+</div>
+</div>
+</body>
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery2.js"></script>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/59a7c6277ab2de3aea9d786f/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+  <script src="js/build/js/intlTelInput.js"></script>
+  <script>
+    $("#phonenum , #googlePhone").intlTelInput({
+      // allowDropdown: false,
+       autoHideDialCode: false,
+      // autoPlaceholder: "off",
+       dropdownContainer: "body",
+      // excludeCountries: ["us"],
+       formatOnDisplay: false,
+       geoIpLookup: function(callback) {
+         $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+           var countryCode = (resp && resp.country) ? resp.country : "";
+           callback(countryCode);
+         });
+       },
+       hiddenInput: "full_number",
+       initialCountry: "auto",
+       nationalMode: false,
+      //onlyCountries: ['us', 'gb', 'ch', 'ca', 'do' , 'cam'],
+       placeholderNumberType: "MOBILE",
+       preferredCountries: ['cn', 'jp'],
+       separateDialCode: true,
+      utilsScript: "js/build/js/utils.js"
+    });
+  </script>
+<!--End of Tawk.to Script-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>  
+
+  <script type="text/javascript" src="js/loader.js"></script>
+
+</html>

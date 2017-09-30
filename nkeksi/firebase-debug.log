@@ -1,0 +1,69 @@
+[debug] [2017-09-23T00:49:17.199Z] ----------------------------------------------------------------------
+[debug] [2017-09-23T00:49:17.203Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --except functions -p public/
+[debug] [2017-09-23T00:49:17.203Z] CLI Version:   3.10.1
+[debug] [2017-09-23T00:49:17.203Z] Platform:      linux
+[debug] [2017-09-23T00:49:17.203Z] Node Version:  v8.0.0
+[debug] [2017-09-23T00:49:17.203Z] Time:          Sat Sep 23 2017 01:49:17 GMT+0100 (WAT)
+[debug] [2017-09-23T00:49:17.203Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-23T00:49:17.303Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-23T00:49:17.303Z] > authorizing via signed-in user
+[debug] [2017-09-23T00:49:17.307Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-09-23T00:49:17.307Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/-GFnoNHw-SMQr4lI7AEeylH5I0C_e9FA72DRV8mBA5o',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sat Sep 23 2017 01:49:17 GMT+0100 (WAT)
+[debug] [2017-09-23T00:49:18.172Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-23T00:49:18.224Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/final-nkeksi  
+ Sat Sep 23 2017 01:49:18 GMT+0100 (WAT)
+[debug] [2017-09-23T00:49:19.692Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-23T00:49:19.694Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/final-nkeksi/tokens  
+ Sat Sep 23 2017 01:49:19 GMT+0100 (WAT)
+[debug] [2017-09-23T00:49:20.731Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-23T00:53:43.534Z] ----------------------------------------------------------------------
+[debug] [2017-09-23T00:53:43.537Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --except functions -p public/
+[debug] [2017-09-23T00:53:43.537Z] CLI Version:   3.10.1
+[debug] [2017-09-23T00:53:43.538Z] Platform:      linux
+[debug] [2017-09-23T00:53:43.538Z] Node Version:  v8.0.0
+[debug] [2017-09-23T00:53:43.538Z] Time:          Sat Sep 23 2017 01:53:43 GMT+0100 (WAT)
+[debug] [2017-09-23T00:53:43.538Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-23T00:53:43.558Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-23T00:53:43.559Z] > authorizing via signed-in user
+[debug] [2017-09-23T00:53:43.562Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/final-nkeksi  
+ Sat Sep 23 2017 01:53:43 GMT+0100 (WAT)
+[debug] [2017-09-23T00:53:44.833Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-23T00:53:44.835Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/final-nkeksi/tokens  
+ Sat Sep 23 2017 01:53:44 GMT+0100 (WAT)
+[debug] [2017-09-23T00:53:45.921Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'final-nkeksi'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing public/ directory for upload...
+[debug] [2017-09-23T00:54:04.162Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/final-nkeksi/uploads/-Kug-jtmoMjw4R1knLQx?fileCount=321&message=  
+ Sat Sep 23 2017 01:54:04 GMT+0100 (WAT)
+[debug] [2017-09-23T00:56:31.164Z] Error: read ECONNRESET
+    at exports._errnoException (util.js:1026:11)
+    at TLSWrap.onread (net.js:607:25)
+[error] 
+[error] Error: Server Error. read ECONNRESET
+[debug] [2017-09-23T00:58:16.235Z] ----------------------------------------------------------------------
+[debug] [2017-09-23T00:58:16.239Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --except functions -p public/
+[debug] [2017-09-23T00:58:16.239Z] CLI Version:   3.10.1
+[debug] [2017-09-23T00:58:16.239Z] Platform:      linux
+[debug] [2017-09-23T00:58:16.239Z] Node Version:  v8.0.0
+[debug] [2017-09-23T00:58:16.240Z] Time:          Sat Sep 23 2017 01:58:16 GMT+0100 (WAT)
+[debug] [2017-09-23T00:58:16.240Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-23T00:58:16.300Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-23T00:58:16.301Z] > authorizing via signed-in user
+[debug] [2017-09-23T00:58:16.304Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/final-nkeksi  
+ Sat Sep 23 2017 01:58:16 GMT+0100 (WAT)
+[debug] [2017-09-23T00:58:36.389Z] Error: getaddrinfo ENOTFOUND admin.firebase.com admin.firebase.com:443
+    at errnoException (dns.js:50:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:95:26)
+[error] 
+[error] Error: Server Error. getaddrinfo ENOTFOUND admin.firebase.com admin.firebase.com:443
